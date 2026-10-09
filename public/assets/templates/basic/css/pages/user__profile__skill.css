@@ -1,0 +1,36 @@
+
+        .nicEdit-main {
+            outline: none !important;
+        }
+
+        .nicEdit-custom-main {
+            border-right-color: #cacaca73 !important;
+            border-bottom-color: #cacaca73 !important;
+            border-left-color: #cacaca73 !important;
+            border-radius: 0 0 5px 5px !important;
+        }
+
+        .nicEdit-panelContain {
+            border-color: #cacaca73 !important;
+            border-radius: 5px 5px 0 0 !important;
+            background-color: #fff !important
+        }
+
+        .nicEdit-buttonContain div {
+            background-color: #fff !important;
+            border: 0 !important;
+        }
+
+        .select2-container--default .select2-selection--multiple .select2-selection__choice {
+            margin-top: 10px !important;
+        }
+
+        .select2-container .selection {
+            width: 100%;
+            display: inline-block;
+        }
+
+        .select2-container--default .select2-selection--single {
+            border: 1px solid hsl(var(--black) / 0.1);
+        }
+    

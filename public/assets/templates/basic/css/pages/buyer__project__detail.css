@@ -1,0 +1,163 @@
+
+            .card {
+                border-radius: 10px;
+                overflow: hidden;
+                background: #fff;
+            }
+
+            h5.text-uppercase {
+                font-size: 1.1rem;
+                font-weight: 600;
+            }
+
+            .info-row strong {
+                font-weight: 600;
+                color: #555;
+            }
+
+            .text-muted {
+                font-size: 0.95rem;
+                color: #6c757d !important;
+            }
+
+
+            .badge {
+                font-size: 0.9rem;
+                padding: 6px 10px;
+            }
+
+            .btn-outline-primary {
+                font-size: 1rem;
+                font-weight: 600;
+                border-radius: 5px;
+            }
+
+            .text--danger {
+                font-weight: 600;
+                font-size: 0.95rem;
+            }
+
+            .custom-section {
+                padding: 15px;
+                background-color: #f9f9f9;
+                border: 1px solid #e0e0e0;
+                border-radius: 5px;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+                font-weight: bold;
+            }
+
+            .info-row {
+                margin-bottom: 10px;
+            }
+
+            .info-label {
+                font-weight: 600;
+                color: #555;
+            }
+
+            .info-value {
+                font-weight: 400;
+                color: #333;
+            }
+
+            .btn-outline-primary {
+                font-size: 1rem;
+                padding: 8px 12px;
+            }
+
+            .flex-column {
+                padding-left: 30px !important;
+            }
+
+            @media (max-width: 991px) {
+                .flex-column {
+                    padding-left: 0 !important;
+                }
+            }
+
+            .star-rating {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: start;
+                font-size: 3rem;
+                cursor: pointer;
+            }
+
+            .star-rating input {
+                display: none;
+            }
+
+            .star-rating label {
+                color: #ddd;
+                transition: color 0.3s;
+            }
+
+            .star-rating input:checked~label,
+            .star-rating label:hover,
+            .star-rating label:hover~label {
+                color: #f5b301;
+            }
+
+            .visually-hidden {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                border: 0;
+                padding: 0;
+                white-space: nowrap;
+                clip-path: inset(100%);
+                clip: rect(0 0 0 0);
+                overflow: hidden;
+            }
+
+
+            .details-wrapper {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+
+            @media (max-width:991px) {
+                .details-wrapper {
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                }
+            }
+
+            .details-wrapper__item {
+                border-right: 1px solid rgba(0, 0, 0, .1);
+            }
+
+            .details-wrapper__item:last-child {
+                border-right: 0;
+                padding-left: 25px;
+            }
+
+            .card-header,
+            .card-body {
+                padding: 20px 30px !important;
+            }
+
+            @media (max-width:575px) {
+                .details-wrapper {
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                }
+
+                .details-wrapper__item {
+                    border-right: 0;
+                }
+
+                .details-wrapper__item:last-child {
+                    padding-left: 0px;
+                    border-top: 1px solid rgba(0, 0, 0, .1);
+                    padding-top: 20px;
+                }
+
+                .card-header,
+                .card-body {
+                    padding: 10px 20px !important;
+                }
+            }
+        

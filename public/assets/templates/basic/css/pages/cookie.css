@@ -1,0 +1,16 @@
+
+        .privacy-page h5 {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .privacy-page ul,
+        .privacy-page ol {
+            padding-left: 20px;
+        }
+
+        .privacy-page ul,
+        .privacy-page li {
+            list-style: auto;
+        }
+    

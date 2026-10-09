@@ -1,0 +1,1236 @@
+{
+ "frontends": [
+  {
+   "dataKeys": "seo.data",
+   "dataValues": {
+    "seo_image": "1",
+    "keywords": [
+     "olance",
+     "freelancing",
+     "bid",
+     "job post",
+     "bid project",
+     "earning",
+     "viserlab"
+    ],
+    "description": "Olance is a dynamic freelancing platform connecting clients with skilled professionals across various industries. With secure transactions, a user-friendly interface, and advanced project management tools, Olance simplifies remote work and collaboration. Whether you're hiring or offering services, Olance provides a seamless experience for freelancers and businesses alike.",
+    "social_title": "Global Freelancing Marketplace",
+    "social_description": "Olance is a dynamic freelancing platform connecting clients with skilled professionals across various industries. With secure transactions, a user-friendly interface, and advanced project management tools, Olance simplifies remote work and collaboration. Whether you're hiring or offering services, Olance provides a seamless experience for freelancers and businesses alike.",
+    "image": "679de5c787bc51738401223.png"
+   },
+   "tempname": null,
+   "slug": "",
+   "id": 1
+  },
+  {
+   "dataKeys": "about.content",
+   "dataValues": {
+    "has_image": "1",
+    "heading": "Simple and Easy to Find Freelancer or Great Job",
+    "image": "67d931272de8c1742287143.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 2
+  },
+  {
+   "dataKeys": "blog.content",
+   "dataValues": {
+    "heading": "Our Latest Blog Post",
+    "subheading": "Stay updated with the latest insights, tips, and trends from our expert team."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 3
+  },
+  {
+   "dataKeys": "contact_us.content",
+   "dataValues": {
+    "heading": "Let`s Talk with US",
+    "subheading": "Disregard the old standards. You can have the best individuals. At this moment. Here.",
+    "title": "Contact with Us",
+    "email_address": "contacts@bf-blessy.com",
+    "contact_number": "+7 977 124-34-06",
+    "contact_details": "Kinshasa, RDC"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 4
+  },
+  {
+   "dataKeys": "counter.content",
+   "dataValues": {
+    "heading": "Latest News",
+    "subheading": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus necessitatibus repudiandae porro reprehenderit, beatae perferendis repellat quo ipsa omnis, vitae!"
+   },
+   "tempname": "basic",
+   "slug": null,
+   "id": 5
+  },
+  {
+   "dataKeys": "social_icon.element",
+   "dataValues": {
+    "title": "Facebook",
+    "social_icon": "<i class=\"fab fa-facebook-f\"></i>",
+    "url": "https://www.facebook.com/"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 6
+  },
+  {
+   "dataKeys": "feature.content",
+   "dataValues": {
+    "heading": "asdf",
+    "sub_heading": "asdf"
+   },
+   "tempname": "basic",
+   "slug": null,
+   "id": 7
+  },
+  {
+   "dataKeys": "feature.element",
+   "dataValues": {
+    "title": "asdf",
+    "description": "asdf",
+    "feature_icon": "asdf"
+   },
+   "tempname": "basic",
+   "slug": null,
+   "id": 8
+  },
+  {
+   "dataKeys": "service.element",
+   "dataValues": {
+    "trx_type": "withdraw",
+    "service_icon": "<i class=\"las la-highlighter\"></i>",
+    "title": "asdfasdf",
+    "description": "asdfasdfasdfasdf"
+   },
+   "tempname": "basic",
+   "slug": null,
+   "id": 9
+  },
+  {
+   "dataKeys": "service.content",
+   "dataValues": {
+    "trx_type": "deposit",
+    "heading": "asdf fffff",
+    "subheading": "555"
+   },
+   "tempname": "basic",
+   "slug": null,
+   "id": 10
+  },
+  {
+   "dataKeys": "cookie.data",
+   "dataValues": {
+    "short_desc": "We may use cookies or any other tracking technologies when you visit our website, including any other media form, mobile website, or mobile application related or connected to help customize the Site and improve your experience.",
+    "description": "<h5>Cookie Policy</h5>\r\n\r\n<p>This Cookie Policy explains how to use cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.</p>\r\n<br>\r\n<h5>What are cookies?</h5>\r\n\r\n<p>Cookies are small pieces of data stored on your computer or mobile device when you visit a website. Cookies are widely used by website owners to make their websites work, or to work more efficiently, as well as to provide reporting information.</p>\r\n<br>\r\n<h5>Why do we use cookies?</h5>\r\n\r\n<p>We use cookies for several reasons. Some cookies are required for technical reasons for our Website to operate, and we refer to these as \"essential\" or \"strictly necessary\" cookies. Other cookies enable us to track and target the interests of our users to enhance the experience on our Website. Third parties serve cookies through our Website for advertising, analytics, and other purposes.</p>\r\n<br>\r\n<h5>What types of cookies do we use?</h5>\r\n\r\n<div>\r\n    <ul style=\"list-style: unset;\">\r\n        <li>\r\n            <strong>Essential Website Cookies:</strong> \r\n            These cookies are strictly necessary to provide you with services available through our Website and to use some of its features.\r\n        </li>\r\n        <li>\r\n            <strong>Analytics and Performance Cookies:</strong> \r\n            These cookies allow us to count visits and traffic sources to measure and improve our Website's performance.\r\n        </li>\r\n        <li>\r\n            <strong>Advertising Cookies:</strong> \r\n            These cookies make advertising messages more relevant to you and your interests. They perform functions like preventing the same ad from continuously reappearing, ensuring that ads are properly displayed, and in some cases selecting advertisements that are based on your interests.\r\n        </li>\r\n    </ul>\r\n</div>\r\n<br>\r\n<h5>Data Collected by Cookies</h5>\r\n<p>Cookies may collect various types of data, including but not limited to:</p>\r\n<ul style=\"list-style: unset;\">\r\n    <li>IP addresses</li>\r\n    <li>Browser and device information</li>\r\n    <li>Referring website addresses</li>\r\n    <li>Pages visited on our website</li>\r\n    <li>Interactions with our website, such as clicks and mouse movements</li>\r\n    <li>Time spent on our website</li>\r\n</ul>\r\n<br>\r\n<h5>How We Use Collected Data</h5>\r\n\r\n<p>We may use data collected by cookies for the following purposes:</p>\r\n<ul style=\"list-style: unset;\">\r\n    <li>To personalize your experience on our website</li>\r\n    <li>To improve our website's functionality and performance</li>\r\n    <li>To analyze trends and gather demographic information about our user base</li>\r\n    <li>To deliver targeted advertising based on your interests</li>\r\n    <li>To prevent fraudulent activity and enhance website security</li>\r\n</ul>\r\n<br>\r\n<h5>Third-party cookies</h5>\r\n\r\n<p>In addition to our cookies, we may also use various third-party cookies to report usage statistics of our Website, deliver advertisements on and through our Website, and so on.</p>\r\n<br>\r\n<h5>How can we control cookies?</h5>\r\n\r\n<p>You have the right to decide whether to accept or reject cookies. You can exercise your cookie preferences by clicking on the \"Cookie Settings\" link in the footer of our website. You can also set or amend your web browser controls to accept or refuse cookies. If you choose to reject cookies, you may still use our Website though your access to some functionality and areas of our Website may be restricted.</p>\r\n<br>\r\n<h5>Changes to our Cookie Policy</h5>\r\n\r\n<p>We may update our Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page.</p>",
+    "status": 1
+   },
+   "tempname": null,
+   "slug": null,
+   "id": 11
+  },
+  {
+   "dataKeys": "policy_pages.element",
+   "dataValues": {
+    "title": "Privacy Policy",
+    "details": "<h5>Introduction</h5>\r\n        <p>\r\n            This Privacy Policy describes how we collects, uses, and discloses information, including personal information, in connection with your use of our website.\r\n        </p>\r\n        <br />\r\n        <h5>Information We Collect</h5>\r\n        <p>We collect two main types of information on the Website:</p>\r\n        <ul>\r\n            <li><p><strong>Personal Information: </strong>This includes data that can identify you as an individual, such as your name, email address, phone number, or mailing address. We only collect this information when you voluntarily provide it to us, like signing up for a newsletter, contacting us through a form, or making a purchase.</p></li>\r\n            <li><p><strong>Non-Personal Information: </strong>This data cannot be used to identify you directly. It includes details like your browser type, device type, operating system, IP address, browsing activity, and usage statistics. We collect this information automatically through cookies and other tracking technologies.</p></li>\r\n        </ul>\r\n        <br />\r\n        <h5>How We Use Information</h5>\r\n        <p>The information we collect allows us to:</p>\r\n        <ul>\r\n            <li>Operate and maintain the Website effectively.</li>\r\n            <li>Send you newsletters or marketing communications, but only with your consent.</li>\r\n            <li>Respond to your inquiries and fulfill your requests.</li>\r\n            <li>Improve the Website and your user experience.</li>\r\n            <li>Personalize your experience on the Website based on your browsing habits.</li>\r\n            <li>Analyze how the Website is used to improve our services.</li>\r\n            <li>Comply with legal and regulatory requirements.</li>\r\n        </ul>\r\n        <br />\r\n        <h5>Sharing of Information</h5>\r\n        <p>We may share your information with trusted third-party service providers who assist us in operating the Website and delivering our services. These providers are obligated by contract to keep your information confidential and use it only for the specific purposes we disclose it for.</p>\r\n        <p>We will never share your personal information with any third parties for marketing purposes without your explicit consent.</p>\r\n        <br />\r\n        <h5>Data Retention</h5>\r\n        <p>We retain your personal information only for as long as necessary to fulfill the purposes it was collected for. We may retain it for longer periods only if required or permitted by law.</p>\r\n        <br />\r\n        <h5>Security Measures</h5>\r\n        <p>We take reasonable precautions to protect your information from unauthorized access, disclosure, alteration, or destruction. However, complete security cannot be guaranteed for any website or internet transmission.</p>\r\n        <br />\r\n        <h5>Changes to this Privacy Policy</h5>\r\n        <p>We may update this Privacy Policy periodically. We will notify you of any changes by posting the revised policy on the Website. We recommend reviewing this policy regularly to stay informed of any updates.</p>\r\n        <p><strong>Remember:</strong>  This is a sample policy and may need adjustments to comply with specific laws and reflect your website's unique data practices. Consider consulting with a legal professional to ensure your policy is fully compliant.</p>"
+   },
+   "tempname": "basic",
+   "slug": "privacy-policy",
+   "id": 12
+  },
+  {
+   "dataKeys": "policy_pages.element",
+   "dataValues": {
+    "title": "Terms of Service",
+    "details": "<div class=\"mb-5\">\r\n    <h5 class=\"mb-3\">What information do we collect?</h5>\r\n    <p>We\r\n        gather data from you when you register on our site, submit a request,\r\n        buy any services, react to an overview, or round out a structure. At the\r\n        point when requesting any assistance or enrolling on our site, as\r\n        suitable, you might be approached to enter your: name, email address, or\r\n        telephone number. You may, nonetheless, visit our site anonymously.</p>\r\n</div>\r\n<div class=\"mb-5\">\r\n    <h5 class=\"mb-3\">How do we protect your information?</h5>\r\n    <p>All provided delicate/credit data is\r\n        sent through Stripe.<br />After\r\n        an exchange, your private data (credit cards, social security numbers,\r\n        financials, and so on) won't be put away on our workers.</p>\r\n</div>\r\n<div class=\"mb-5\">\r\n    <h5 class=\"mb-3\">Do we disclose any information to outside parties?</h5>\r\n    <p>We\r\n        don't sell, exchange, or in any case, move to outside gatherings by and\r\n        by recognizable data. This does exclude confided-in outsiders who help\r\n        us in working our site, leading our business, or adjusting you since\r\n        those gatherings consent to keep this data private. We may likewise\r\n        deliver your data when we accept discharge is suitable to follow the\r\n        law, implement our site strategies, or ensure our own or others' rights,\r\n        property, or wellbeing.</p>\r\n</div>\r\n<div class=\"mb-5\">\r\n    <h5 class=\"mb-3\">Children's Online Privacy Protection Act Compliance</h5>\r\n    <p>We\r\n        are consistent with the prerequisites of COPPA (Children's Online\r\n        Privacy Protection Act), we don't gather any data from anybody under 13\r\n        years old. Our site, items, and administrations are completely\r\n        coordinated to individuals who are in any event 13 years of age or more\r\n        established.</p>\r\n</div>\r\n<div class=\"mb-5\">\r\n    <h5 class=\"mb-3\">\r\n        Changes to our Privacy Policy</h5>\r\n    <p>If we decide to change our privacy\r\n        policy, we will post those changes on this page.</p>\r\n</div>\r\n<div class=\"mb-5\">\r\n    <h5 class=\"mb-3\">How long we retain your information?</h5>\r\n    <p>At\r\n        the point when you register for our site, we cycle and keep the\r\n        information we have about you however long you don't erase the record or\r\n        withdraw yourself (subject to laws and guidelines).</p>\r\n</div>\r\n<div>\r\n    <h5 class=\"mb-3\">What we don’t do with your data</h5>\r\n    <p>We\r\n        don't and will never share, unveil, sell, or in any case give your\r\n        information to different organizations for the promotion of their items\r\n        or administrations.</p>\r\n</div>"
+   },
+   "tempname": "basic",
+   "slug": "terms-of-service",
+   "id": 13
+  },
+  {
+   "dataKeys": "maintenance.data",
+   "dataValues": {
+    "description": "<div class=\"mb-5\" style=\"font-family: Nunito, sans-serif; margin-bottom: 3rem !important;\"><h3 class=\"mb-3\" style=\"text-align: center; font-weight: 600; line-height: 1.3; font-size: 24px; font-family: Exo, sans-serif;\"><font color=\"#ff0000\">THE SITE IS UNDER MAINTENANCE</font></h3><p class=\"font-18\" style=\"color: rgb(111, 111, 111); text-align: center; margin-right: 0px; margin-left: 0px; font-size: 18px !important;\">We're just tuning up a few things.We apologize for the inconvenience but Front is currently undergoing planned maintenance. Thanks for your patience.</p></div>",
+    "image": "6603c203472ad1711522307.png"
+   },
+   "tempname": null,
+   "slug": null,
+   "id": 14
+  },
+  {
+   "dataKeys": "blog.element",
+   "dataValues": {
+    "has_image": [
+     "1"
+    ],
+    "title": "Exploring the Cryptocurrency Landscape: A Comprehensive Guide for Beginners.",
+    "description": "<div>The landscape of service center automation has undergone a remarkable transformation over the past few decades,\r\n    shifting from reactive to proactive approaches. Initially, service centers operated on a reactive model, primarily\r\n    addressing issues only after they arose. This method often involved responding to customer complaints and\r\n    troubleshooting problems as they emerged, leading to higher levels of downtime and customer dissatisfaction. The\r\n    focus was largely on fixing problems rather than preventing them, which created a cycle of continuous reaction to\r\n    service issues.</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">Shifting Paradigms: The Move Toward Proactive Service Models</h6>\r\n<div>As technology advanced, the paradigm began to shift towards a more proactive approach. The rise of advanced data\r\n    analytics and machine learning techniques enabled service centers to anticipate potential issues before they\r\n    occurred. By analyzing historical data and recognizing patterns, service centers could now predict when equipment\r\n    might fail or when a system could encounter problems. This shift not only reduced the frequency of unexpected\r\n    disruptions but also improved overall operational efficiency. Predictive maintenance became a key feature of\r\n    proactive service centers, allowing them to schedule maintenance activities during non-peak hours and address issues\r\n    before they impacted the customer experience.</div>\r\n<div><br /></div>\r\n<blockquote style=\"font-style:italic;text-align:center;padding:20px;color:#464545;background:rgba(139,131,133,0.54);font-size:18px;border-left:4px solid rgb(223,52,89);\">\r\n    As technology continues to evolve, service centers are likely to adopt even more advanced and innovative solutions that enhance their ability to provide seamless and proactive service.</blockquote>\r\n<h6 class=\"m-0\">Harnessing Data Analytics and Machine Learning for Predictive Maintenance</h6>\r\n<div>This evolution was further accelerated by the integration of artificial intelligence (AI) and automation tools.\r\n    AI-driven systems can now monitor and analyze real-time data from various sources, providing insights into potential\r\n    issues and suggesting preventive measures. Automation tools facilitate swift responses to identified issues, often\r\n    without the need for human intervention. For instance, automated systems can initiate repairs or adjustments based\r\n    on predefined parameters, ensuring that minor issues are resolved before they escalate into significant problems.\r\n</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">The Role of AI and Automation in Revolutionizing Service Center Operations</h6>\r\n<div>The proactive approach not only enhances operational efficiency but also fosters a more positive customer\r\n    experience. By addressing potential issues before they impact customers, service centers can ensure a higher level\r\n    of service continuity and reliability. Customers benefit from fewer disruptions and a more streamlined experience,\r\n    leading to increased satisfaction and loyalty.</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">Enhancing Customer Experience Through Proactive Service Strategies</h6>\r\n<div>In essence, the evolution from a reactive to a proactive model in service center automation represents a\r\n    significant leap forward. It highlights the importance of leveraging advanced technologies to not only address\r\n    problems but to anticipate and prevent them, ultimately leading to a more efficient and customer-centric operation.\r\n    As technology continues to evolve, service centers will likely see even more sophisticated solutions that further\r\n    enhance their ability to provide seamless and proactive service.</div>\r\n<div><br /></div>",
+    "image": "67d290bee76941741852862.png"
+   },
+   "tempname": "basic",
+   "slug": "exploring-the-cryptocurrency-landscape-a-comprehensive-guide-for-beginners",
+   "id": 15
+  },
+  {
+   "dataKeys": "counter.content",
+   "dataValues": {
+    "heading": "Latest Newsss",
+    "subheading": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus necessitatibus repudiandae porro reprehenderit, beatae perferendis repellat quo ipsa omnis, vitae!"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 16
+  },
+  {
+   "dataKeys": "counter.content",
+   "dataValues": {
+    "heading": "Latest News",
+    "subheading": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus necessitatibus repudiandae porro reprehenderit, beatae perferendis repellat quo ipsa omnis, vitae!"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 17
+  },
+  {
+   "dataKeys": "kyc.content",
+   "dataValues": {
+    "required": "Complete KYC to unlock the full potential of our platform! KYC helps us verify your identity and keep things secure. It is quick and easy just follow the on-screen instructions. Get started with KYC verification now!",
+    "pending": "Your KYC verification is being reviewed. We might need some additional information. You will get an email update soon. In the meantime, explore our platform with limited features."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 18
+  },
+  {
+   "dataKeys": "kyc.content",
+   "dataValues": {
+    "required": "Complete KYC to unlock the full potential of our platform! KYC helps us verify your identity and keep things secure. It is quick and easy just follow the on-screen instructions. Get started with KYC verification now!",
+    "pending": "Your KYC verification is being reviewed. We might need some additional information. You will get an email update soon. In the meantime, explore our platform with limited features.",
+    "reject": "We regret to inform you that the Know Your Customer (KYC) information provided has been reviewed and unfortunately, it has not met our verification standards."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 19
+  },
+  {
+   "dataKeys": "banner.content",
+   "dataValues": {
+    "has_image": "1",
+    "heading": "Find the Best Freelance Jobs",
+    "subheading": "Connecting talent with opportunity – The future of work is here!",
+    "subtitle": "Trusted by 1000+ Business",
+    "feature_one": "100% Remote",
+    "feature_two": "6700+ Jobs Available",
+    "feature_three": "Great Job",
+    "image": "67d92c14906c01742285844.png",
+    "shape": "673af8b35ae361731918003.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 20
+  },
+  {
+   "dataKeys": "faq.element",
+   "dataValues": {
+    "question": "What types of jobs are available on BF-Blessy?",
+    "answer": "BF-Blessy offers a wide range of job categories, including writing, graphic design, web development, marketing, customer service, and many more, catering to various skill sets and industries."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 21
+  },
+  {
+   "dataKeys": "register_disable.content",
+   "dataValues": {
+    "has_image": "1",
+    "heading": "Registration Currently Disabled",
+    "subheading": "Page you are looking for doesn't exit or an other error occurred or temporarily unavailable.",
+    "button_name": "Go to Home",
+    "button_url": "#",
+    "image": "663a0f20ecd0b1715080992.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 22
+  },
+  {
+   "dataKeys": "client.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d9402f2dd2c1742290991.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 23
+  },
+  {
+   "dataKeys": "client.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d94065e1acf1742291045.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 24
+  },
+  {
+   "dataKeys": "client.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d9405f5cbd31742291039.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 25
+  },
+  {
+   "dataKeys": "client.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d940590aaa81742291033.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 26
+  },
+  {
+   "dataKeys": "client.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d94051c71041742291025.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 27
+  },
+  {
+   "dataKeys": "client.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d94047733c51742291015.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 28
+  },
+  {
+   "dataKeys": "how_work.content",
+   "dataValues": {
+    "heading": "It's Easy to Get Work Done",
+    "subheading": "Our platform connects clients with freelancers to get work done efficiently and securely."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 29
+  },
+  {
+   "dataKeys": "how_work.element",
+   "dataValues": {
+    "icon": "<i class=\"fas fa-briefcase\"></i>",
+    "title": "Post a Job",
+    "content": "Posting a job is easy. Provide a detailed description of your project, set your budget, and specify any requirements."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 30
+  },
+  {
+   "dataKeys": "how_work.element",
+   "dataValues": {
+    "icon": "<i class=\"fas fa-user-graduate\"></i>",
+    "title": "Hire Freelancers",
+    "content": "Browse through our extensive list of freelancers, review their profiles, and find the perfect match for your project."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 31
+  },
+  {
+   "dataKeys": "how_work.element",
+   "dataValues": {
+    "icon": "<i class=\"fas fa-check-square\"></i>",
+    "title": "Get Work Done",
+    "content": "Once you've hired, directly communicate through our platform to discuss project details and milestones."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 32
+  },
+  {
+   "dataKeys": "how_work.element",
+   "dataValues": {
+    "icon": "<i class=\"fas fa-hand-holding-usd\"></i>",
+    "title": "Make Secure Payments",
+    "content": "We ensure that your transactions are safe and secure. Use our platform to make payments with confidence."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 33
+  },
+  {
+   "dataKeys": "account.content",
+   "dataValues": {
+    "has_image": "1",
+    "freelancer_title": "Sign Up as a Freelancer",
+    "freelancer_content": "Showcase your skills, connect with buyers, and get hired.",
+    "freelancer_button_name": "Create Freelance Account",
+    "buyer_title": "Sign Up as a Buyer",
+    "buyer_content": "Post jobs, hire skilled talent, and get projects done.",
+    "buyer_button_name": "Create Buyer Account",
+    "freelancer": "67d929f13124f1742285297.png",
+    "buyer": "67d929f13efd31742285297.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 34
+  },
+  {
+   "dataKeys": "why_choose.content",
+   "dataValues": {
+    "heading": "Why You Should Choose Us",
+    "subheading": "Discover the benefits of using our platform for your freelancing and hiring needs."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 35
+  },
+  {
+   "dataKeys": "why_choose.element",
+   "dataValues": {
+    "has_image": "1",
+    "title": "Proof & Quality",
+    "content": "We ensure high-quality results with our proof of work and milestone system. Review completed work before releasing payments.",
+    "image": "67d92d4630f5f1742286150.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 36
+  },
+  {
+   "dataKeys": "why_choose.element",
+   "dataValues": {
+    "has_image": "1",
+    "title": "No Cost Until You Hire",
+    "content": "Enjoy our platform with zero upfront costs. You only pay when you hire a freelancer and paid if hastle free done your project.",
+    "image": "67d92d3aea8ba1742286138.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 37
+  },
+  {
+   "dataKeys": "why_choose.element",
+   "dataValues": {
+    "has_image": "1",
+    "title": "Safe and Secure",
+    "content": "Our platform uses advanced security measures to protect your data and transactions, ensuring a secure experience.",
+    "image": "67d92d322b52c1742286130.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 38
+  },
+  {
+   "dataKeys": "why_choose.element",
+   "dataValues": {
+    "has_image": "1",
+    "title": "Post Job & Hire a Pro",
+    "content": "Clients can easily post job and hire professionals. Provide detailed project requirements and attract proposals from qualified freelancers.",
+    "image": "67d92d2981d5d1742286121.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 39
+  },
+  {
+   "dataKeys": "why_choose.element",
+   "dataValues": {
+    "has_image": "1",
+    "title": "Bid to Find Jobs",
+    "content": "Freelancers can bid on jobs. Showcase your skills, submit proposals, and secure projects that match your expertise.",
+    "image": "67d92d210a8a91742286113.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 40
+  },
+  {
+   "dataKeys": "why_choose.element",
+   "dataValues": {
+    "has_image": "1",
+    "title": "Top Rated",
+    "content": "We host top-rated freelancers who are experts in their fields. Browse profiles & review ratings to find the best talents.",
+    "image": "67d92d169e8d61742286102.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 41
+  },
+  {
+   "dataKeys": "find_task.content",
+   "dataValues": {
+    "has_image": "1",
+    "subtitle": "Find Your Task",
+    "heading": "Find your work as your skill",
+    "subheading": "Unlock your potential and find work that matches your skills and expertise. Our platform is designed to connect talented freelancers with clients who need their services.",
+    "button_name": "Find Your Work",
+    "image": "67d930681c42a1742286952.png",
+    "shape": "673b2b970126d1731931031.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 42
+  },
+  {
+   "dataKeys": "find_task.element",
+   "dataValues": {
+    "find_step": "Access expert talent to fill your skill gaps"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 43
+  },
+  {
+   "dataKeys": "find_task.element",
+   "dataValues": {
+    "find_step": "Control your workflow : bid & proved your skill"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 44
+  },
+  {
+   "dataKeys": "find_task.element",
+   "dataValues": {
+    "find_step": "Always grow your skill & find job"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 45
+  },
+  {
+   "dataKeys": "facility.content",
+   "dataValues": {
+    "has_image": "1",
+    "heading": "How's BF-Blessy is Different",
+    "subheading": "Discover the facilities, or benefits of using OLACE for your freelancing and hiring needs.",
+    "image": "67d9265b17fcb1742284379.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 46
+  },
+  {
+   "dataKeys": "facility.element",
+   "dataValues": {
+    "title": "Higher Quality Listings",
+    "content": "We ensure that our job listings are of the highest quality. Each listing is thoroughly vetted to ensure it meets our standards, providing you with the best opportunities to showcase your skills and expertise."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 47
+  },
+  {
+   "dataKeys": "facility.element",
+   "dataValues": {
+    "title": "Unlimited Job Search Resources",
+    "content": "With BF-Blessy, you access unlimited job search resources. Use advanced filters, personalized job recommendations, and comprehensive listings to find the best match for your skills & goals."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 48
+  },
+  {
+   "dataKeys": "facility.element",
+   "dataValues": {
+    "title": "Save Time",
+    "content": "We ensure that our job listings are of the highest quality. Each listing is thoroughly vetted to ensure it meets our standards, providing you with the best opportunities to showcase your skills and expertise."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 49
+  },
+  {
+   "dataKeys": "completion_work.content",
+   "dataValues": {
+    "has_image": "1",
+    "heading": "Greeting",
+    "subheading": "Finishing Work Has Never Been More Straightforward",
+    "image": "67d925f7de2fb1742284279.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 50
+  },
+  {
+   "dataKeys": "completion_work.element",
+   "dataValues": {
+    "done_step": "Get matched with expert freelancers in minutes"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 51
+  },
+  {
+   "dataKeys": "completion_work.element",
+   "dataValues": {
+    "done_step": "Dedicated 24/7 customer service team"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 52
+  },
+  {
+   "dataKeys": "completion_work.element",
+   "dataValues": {
+    "done_step": "Money back guarantee and anti-fraud protection"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 53
+  },
+  {
+   "dataKeys": "testimonial.content",
+   "dataValues": {
+    "heading": "Our Users Feedback",
+    "subheading": "Hear what our users have to say about their experience with our platform."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 54
+  },
+  {
+   "dataKeys": "testimonial.element",
+   "dataValues": {
+    "has_image": "1",
+    "quote": "I've saved so much time using this platform. The advanced search filters and personalized job recommendations are fantastic.",
+    "name": "John Smith",
+    "country": "UK",
+    "image": "67d9338740e281742287751.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 55
+  },
+  {
+   "dataKeys": "testimonial.element",
+   "dataValues": {
+    "has_image": "1",
+    "quote": "The platform is incredibly easy to use. Posting jobs, communicating with freelancers, and managing projects has never been simpler.",
+    "name": "Sarah Johnson",
+    "country": "USA",
+    "image": "67d9337f5f5951742287743.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 56
+  },
+  {
+   "dataKeys": "testimonial.element",
+   "dataValues": {
+    "has_image": "1",
+    "quote": "The quality of freelancers on this platform is exceptional. I've hired top-rated professionals who delivered outstanding results.",
+    "name": "Richitya Roy",
+    "country": "India",
+    "image": "67d9335d03c161742287709.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 57
+  },
+  {
+   "dataKeys": "testimonial.element",
+   "dataValues": {
+    "has_image": "1",
+    "quote": "I'm impressed with the security measures in place. I always feel safe making transactions and collaborating with clients.",
+    "name": "Quinn Elena",
+    "country": "Canada",
+    "image": "67d933753ae241742287733.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 58
+  },
+  {
+   "dataKeys": "testimonial.element",
+   "dataValues": {
+    "has_image": "1",
+    "quote": "Using this platform has been a game-changer for my freelancing career. I've connected with amazing clients and worked on exciting projects",
+    "name": "Emily Davis",
+    "country": "German",
+    "image": "67d9334a3c9131742287690.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 59
+  },
+  {
+   "dataKeys": "top_freelancer.content",
+   "dataValues": {
+    "heading": "Top Rated Freelancers",
+    "subheading": "Access top-rated professionals. Browse profiles, read reviews, and hire the best talent."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 60
+  },
+  {
+   "dataKeys": "counter.element",
+   "dataValues": {
+    "icon": "<i class=\"far fa-star\"></i>",
+    "digit": "96",
+    "content": "Top Rated freelancers, covering 8,766 skills"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 61
+  },
+  {
+   "dataKeys": "counter.element",
+   "dataValues": {
+    "icon": "<i class=\"fa-solid fa-sack-dollar\"></i>",
+    "digit": "110",
+    "content": "Every year earned by top freelancers earning over $7,000/m"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 62
+  },
+  {
+   "dataKeys": "counter.element",
+   "dataValues": {
+    "icon": "<i class=\"fas fa-hourglass-half\"></i>",
+    "digit": "3",
+    "content": "Find task a freelancer, with 90% of projects completed in 7 days"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 63
+  },
+  {
+   "dataKeys": "subscribe.content",
+   "dataValues": {
+    "has_image": "1",
+    "heading": "Subscribe Our Newsletter",
+    "subheading": "1000+ user subscribe our newsletter",
+    "image": "67d9340c2ee7b1742287884.png",
+    "shape": "673b4178ca7a71731936632.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 64
+  },
+  {
+   "dataKeys": "blog.element",
+   "dataValues": {
+    "has_image": [
+     "1"
+    ],
+    "title": "Staying Inspired: Cultivating Creativity in Freelance Work",
+    "description": "<div>The landscape of service center automation has undergone a remarkable transformation over the past few decades,\r\n    shifting from reactive to proactive approaches. Initially, service centers operated on a reactive model, primarily\r\n    addressing issues only after they arose. This method often involved responding to customer complaints and\r\n    troubleshooting problems as they emerged, leading to higher levels of downtime and customer dissatisfaction. The\r\n    focus was largely on fixing problems rather than preventing them, which created a cycle of continuous reaction to\r\n    service issues.</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">Shifting Paradigms: The Move Toward Proactive Service Models</h6>\r\n<div>As technology advanced, the paradigm began to shift towards a more proactive approach. The rise of advanced data\r\n    analytics and machine learning techniques enabled service centers to anticipate potential issues before they\r\n    occurred. By analyzing historical data and recognizing patterns, service centers could now predict when equipment\r\n    might fail or when a system could encounter problems. This shift not only reduced the frequency of unexpected\r\n    disruptions but also improved overall operational efficiency. Predictive maintenance became a key feature of\r\n    proactive service centers, allowing them to schedule maintenance activities during non-peak hours and address issues\r\n    before they impacted the customer experience.</div>\r\n<div><br /></div>\r\n<blockquote style=\"font-style:italic;text-align:center;padding:20px;color:#464545;background:rgba(139,131,133,0.54);font-size:18px;border-left:4px solid rgb(223,52,89);\">\r\n    As technology continues to evolve, service centers are likely to adopt even more advanced and innovative solutions that enhance their ability to provide seamless and proactive service.</blockquote>\r\n<h6 class=\"m-0\">Harnessing Data Analytics and Machine Learning for Predictive Maintenance</h6>\r\n<div>This evolution was further accelerated by the integration of artificial intelligence (AI) and automation tools.\r\n    AI-driven systems can now monitor and analyze real-time data from various sources, providing insights into potential\r\n    issues and suggesting preventive measures. Automation tools facilitate swift responses to identified issues, often\r\n    without the need for human intervention. For instance, automated systems can initiate repairs or adjustments based\r\n    on predefined parameters, ensuring that minor issues are resolved before they escalate into significant problems.\r\n</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">The Role of AI and Automation in Revolutionizing Service Center Operations</h6>\r\n<div>The proactive approach not only enhances operational efficiency but also fosters a more positive customer\r\n    experience. By addressing potential issues before they impact customers, service centers can ensure a higher level\r\n    of service continuity and reliability. Customers benefit from fewer disruptions and a more streamlined experience,\r\n    leading to increased satisfaction and loyalty.</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">Enhancing Customer Experience Through Proactive Service Strategies</h6>\r\n<div>In essence, the evolution from a reactive to a proactive model in service center automation represents a\r\n    significant leap forward. It highlights the importance of leveraging advanced technologies to not only address\r\n    problems but to anticipate and prevent them, ultimately leading to a more efficient and customer-centric operation.\r\n    As technology continues to evolve, service centers will likely see even more sophisticated solutions that further\r\n    enhance their ability to provide seamless and proactive service.</div>\r\n<div><br /></div>",
+    "image": "67d290b4890d81741852852.png"
+   },
+   "tempname": "basic",
+   "slug": "staying-inspired-cultivating-creativity-in-freelance-work",
+   "id": 65
+  },
+  {
+   "dataKeys": "blog.element",
+   "dataValues": {
+    "has_image": [
+     "1"
+    ],
+    "title": "The Art of Self-Promotion: Marketing Strategies for Freelancers",
+    "description": "<div>The landscape of service center automation has undergone a remarkable transformation over the past few decades,\r\n    shifting from reactive to proactive approaches. Initially, service centers operated on a reactive model, primarily\r\n    addressing issues only after they arose. This method often involved responding to customer complaints and\r\n    troubleshooting problems as they emerged, leading to higher levels of downtime and customer dissatisfaction. The\r\n    focus was largely on fixing problems rather than preventing them, which created a cycle of continuous reaction to\r\n    service issues.</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">Shifting Paradigms: The Move Toward Proactive Service Models</h6>\r\n<div>As technology advanced, the paradigm began to shift towards a more proactive approach. The rise of advanced data\r\n    analytics and machine learning techniques enabled service centers to anticipate potential issues before they\r\n    occurred. By analyzing historical data and recognizing patterns, service centers could now predict when equipment\r\n    might fail or when a system could encounter problems. This shift not only reduced the frequency of unexpected\r\n    disruptions but also improved overall operational efficiency. Predictive maintenance became a key feature of\r\n    proactive service centers, allowing them to schedule maintenance activities during non-peak hours and address issues\r\n    before they impacted the customer experience.</div>\r\n<div><br /></div>\r\n<blockquote style=\"font-style:italic;text-align:center;padding:20px;color:#464545;background:rgba(139,131,133,0.54);font-size:18px;border-left:4px solid rgb(223,52,89);\">\r\n    As technology continues to evolve, service centers are likely to adopt even more advanced and innovative solutions that enhance their ability to provide seamless and proactive service.</blockquote>\r\n<h6 class=\"m-0\">Harnessing Data Analytics and Machine Learning for Predictive Maintenance</h6>\r\n<div>This evolution was further accelerated by the integration of artificial intelligence (AI) and automation tools.\r\n    AI-driven systems can now monitor and analyze real-time data from various sources, providing insights into potential\r\n    issues and suggesting preventive measures. Automation tools facilitate swift responses to identified issues, often\r\n    without the need for human intervention. For instance, automated systems can initiate repairs or adjustments based\r\n    on predefined parameters, ensuring that minor issues are resolved before they escalate into significant problems.\r\n</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">The Role of AI and Automation in Revolutionizing Service Center Operations</h6>\r\n<div>The proactive approach not only enhances operational efficiency but also fosters a more positive customer\r\n    experience. By addressing potential issues before they impact customers, service centers can ensure a higher level\r\n    of service continuity and reliability. Customers benefit from fewer disruptions and a more streamlined experience,\r\n    leading to increased satisfaction and loyalty.</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">Enhancing Customer Experience Through Proactive Service Strategies</h6>\r\n<div>In essence, the evolution from a reactive to a proactive model in service center automation represents a\r\n    significant leap forward. It highlights the importance of leveraging advanced technologies to not only address\r\n    problems but to anticipate and prevent them, ultimately leading to a more efficient and customer-centric operation.\r\n    As technology continues to evolve, service centers will likely see even more sophisticated solutions that further\r\n    enhance their ability to provide seamless and proactive service.</div>\r\n<div><br /></div>",
+    "image": "67d290a7d1e161741852839.png"
+   },
+   "tempname": "basic",
+   "slug": "the-art-of-self-promotion-marketing-strategies-for-freelancers",
+   "id": 66
+  },
+  {
+   "dataKeys": "blog.element",
+   "dataValues": {
+    "has_image": [
+     "1"
+    ],
+    "title": "Unlocking Your Full Potential: Strategies to Boost Freelance Productivity",
+    "description": "<div>The landscape of service center automation has undergone a remarkable transformation over the past few decades,\r\n    shifting from reactive to proactive approaches. Initially, service centers operated on a reactive model, primarily\r\n    addressing issues only after they arose. This method often involved responding to customer complaints and\r\n    troubleshooting problems as they emerged, leading to higher levels of downtime and customer dissatisfaction. The\r\n    focus was largely on fixing problems rather than preventing them, which created a cycle of continuous reaction to\r\n    service issues.</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">Shifting Paradigms: The Move Toward Proactive Service Models</h6>\r\n<div>As technology advanced, the paradigm began to shift towards a more proactive approach. The rise of advanced data\r\n    analytics and machine learning techniques enabled service centers to anticipate potential issues before they\r\n    occurred. By analyzing historical data and recognizing patterns, service centers could now predict when equipment\r\n    might fail or when a system could encounter problems. This shift not only reduced the frequency of unexpected\r\n    disruptions but also improved overall operational efficiency. Predictive maintenance became a key feature of\r\n    proactive service centers, allowing them to schedule maintenance activities during non-peak hours and address issues\r\n    before they impacted the customer experience.</div>\r\n<div><br /></div>\r\n<blockquote style=\"font-style:italic;text-align:center;padding:20px;color:#464545;background:rgba(139,131,133,0.54);font-size:18px;border-left:4px solid rgb(223,52,89);\">\r\n    As technology continues to evolve, service centers are likely to adopt even more advanced and innovative solutions that enhance their ability to provide seamless and proactive service.</blockquote>\r\n<h6 class=\"m-0\">Harnessing Data Analytics and Machine Learning for Predictive Maintenance</h6>\r\n<div>This evolution was further accelerated by the integration of artificial intelligence (AI) and automation tools.\r\n    AI-driven systems can now monitor and analyze real-time data from various sources, providing insights into potential\r\n    issues and suggesting preventive measures. Automation tools facilitate swift responses to identified issues, often\r\n    without the need for human intervention. For instance, automated systems can initiate repairs or adjustments based\r\n    on predefined parameters, ensuring that minor issues are resolved before they escalate into significant problems.\r\n</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">The Role of AI and Automation in Revolutionizing Service Center Operations</h6>\r\n<div>The proactive approach not only enhances operational efficiency but also fosters a more positive customer\r\n    experience. By addressing potential issues before they impact customers, service centers can ensure a higher level\r\n    of service continuity and reliability. Customers benefit from fewer disruptions and a more streamlined experience,\r\n    leading to increased satisfaction and loyalty.</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">Enhancing Customer Experience Through Proactive Service Strategies</h6>\r\n<div>In essence, the evolution from a reactive to a proactive model in service center automation represents a\r\n    significant leap forward. It highlights the importance of leveraging advanced technologies to not only address\r\n    problems but to anticipate and prevent them, ultimately leading to a more efficient and customer-centric operation.\r\n    As technology continues to evolve, service centers will likely see even more sophisticated solutions that further\r\n    enhance their ability to provide seamless and proactive service.</div>\r\n<div><br /></div>",
+    "image": "67d2909ceb7c01741852828.png"
+   },
+   "tempname": "basic",
+   "slug": "unlocking-your-full-potential-strategies-to-boost-freelance-productivity",
+   "id": 67
+  },
+  {
+   "dataKeys": "faq.content",
+   "dataValues": {
+    "heading": "Frequently Asked Questions",
+    "subheading": "Find clear answers to the most common questions about our services, process, and support.",
+    "has_image": "1",
+    "image": "67d9248a6a2f51742283914.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 68
+  },
+  {
+   "dataKeys": "faq.element",
+   "dataValues": {
+    "question": "What should I do if I encounter a difficult client?",
+    "answer": "If you face challenges with a client, communicate openly to resolve issues, set clear expectations, and if necessary, consider ending the contract professionally if the situation does not improve."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 69
+  },
+  {
+   "dataKeys": "faq.element",
+   "dataValues": {
+    "question": "How can I increase my chances of getting hired?",
+    "answer": "To increase your chances, maintain a complete and professional profile, submit tailored proposals for each job, and gather positive reviews from clients to build your reputation."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 70
+  },
+  {
+   "dataKeys": "faq.element",
+   "dataValues": {
+    "question": "How to bid for find work?",
+    "answer": "Look for projects that match your skills and interests, consider the client's budget and feedback history, and assess the number of proposals already submitted to gauge competition."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 71
+  },
+  {
+   "dataKeys": "faq.element",
+   "dataValues": {
+    "question": "What is the best way to write a proposal?",
+    "answer": "A strong proposal should address the client's needs, highlight your relevant experience, include specific examples of past work, and demonstrate your understanding of the project."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 72
+  },
+  {
+   "dataKeys": "social_icon.element",
+   "dataValues": {
+    "title": "X",
+    "social_icon": "<i class=\"fa-brands fa-x-twitter\"></i>",
+    "url": "https://www.twitter.com/"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 73
+  },
+  {
+   "dataKeys": "social_icon.element",
+   "dataValues": {
+    "title": "Linkedin",
+    "social_icon": "<i class=\"fab fa-linkedin-in\"></i>",
+    "url": "https://www.linkedin.com/"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 74
+  },
+  {
+   "dataKeys": "social_icon.element",
+   "dataValues": {
+    "title": "Instagram",
+    "social_icon": "<i class=\"fab fa-instagram\"></i>",
+    "url": "https://www.instagram.com/"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 75
+  },
+  {
+   "dataKeys": "about.element",
+   "dataValues": {
+    "has_image": "1",
+    "title": "Find a Freelancer and Hire Top Talent",
+    "content": "To find top talent for your Upwork project, explore the platform's extensive freelancer database.",
+    "image": "67d945cd160991742292429.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 76
+  },
+  {
+   "dataKeys": "about.element",
+   "dataValues": {
+    "has_image": "1",
+    "title": "Find a Job and Top Matches Buyer",
+    "content": "Discover the perfect job opportunities on Upwork tailored to your skills.",
+    "image": "67d945b86adf21742292408.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 77
+  },
+  {
+   "dataKeys": "about.element",
+   "dataValues": {
+    "has_image": "1",
+    "title": "Work without breaking the bank",
+    "content": "Maximize your budget by leveraging Upwork’s diverse talent pool.",
+    "image": "67d945a395d981742292387.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 78
+  },
+  {
+   "dataKeys": "client.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d9404143eb31742291009.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 79
+  },
+  {
+   "dataKeys": "brand.content",
+   "dataValues": {
+    "heading": "Trusted by 100,000+ Business"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 80
+  },
+  {
+   "dataKeys": "brand.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d92ef3296931742286579.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 81
+  },
+  {
+   "dataKeys": "brand.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "673c3965223e71732000101.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 82
+  },
+  {
+   "dataKeys": "brand.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d92efee09041742286590.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 83
+  },
+  {
+   "dataKeys": "brand.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d92eeae2c5a1742286570.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 84
+  },
+  {
+   "dataKeys": "brand.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d941292ac081742291241.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 85
+  },
+  {
+   "dataKeys": "brand.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d92ed8792921742286552.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 86
+  },
+  {
+   "dataKeys": "brand.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d92ed2b46b31742286546.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 87
+  },
+  {
+   "dataKeys": "brand.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d92ecd88df01742286541.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 88
+  },
+  {
+   "dataKeys": "support.content",
+   "dataValues": {
+    "has_image": "1",
+    "heading": "24/7 customer support",
+    "hotline_number": "5896",
+    "hotline_email": "support@gmail.com",
+    "image": "67d92e88c6abb1742286472.png",
+    "shape": "67d929feeafa01742285310.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 89
+  },
+  {
+   "dataKeys": "brand.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d92ec84780c1742286536.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 90
+  },
+  {
+   "dataKeys": "login.content",
+   "dataValues": {
+    "has_image": "1",
+    "heading": "Login Account",
+    "image": "673c528892dfc1732006536.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 91
+  },
+  {
+   "dataKeys": "register.content",
+   "dataValues": {
+    "has_image": "1",
+    "heading": "Register Account",
+    "image": "673c52aeac7991732006574.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 92
+  },
+  {
+   "dataKeys": "banned.content",
+   "dataValues": {
+    "has_image": "1",
+    "heading": "You are banned",
+    "image": "673c88ad289b31732020397.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 93
+  },
+  {
+   "dataKeys": "blog.element",
+   "dataValues": {
+    "has_image": [
+     "1"
+    ],
+    "title": "Do professional logo design, unlimited revisions, favicon and artwork",
+    "description": "<div>The landscape of service center automation has undergone a remarkable transformation over the past few decades,\r\n    shifting from reactive to proactive approaches. Initially, service centers operated on a reactive model, primarily\r\n    addressing issues only after they arose. This method often involved responding to customer complaints and\r\n    troubleshooting problems as they emerged, leading to higher levels of downtime and customer dissatisfaction. The\r\n    focus was largely on fixing problems rather than preventing them, which created a cycle of continuous reaction to\r\n    service issues.</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">Shifting Paradigms: The Move Toward Proactive Service Models</h6>\r\n<div>As technology advanced, the paradigm began to shift towards a more proactive approach. The rise of advanced data\r\n    analytics and machine learning techniques enabled service centers to anticipate potential issues before they\r\n    occurred. By analyzing historical data and recognizing patterns, service centers could now predict when equipment\r\n    might fail or when a system could encounter problems. This shift not only reduced the frequency of unexpected\r\n    disruptions but also improved overall operational efficiency. Predictive maintenance became a key feature of\r\n    proactive service centers, allowing them to schedule maintenance activities during non-peak hours and address issues\r\n    before they impacted the customer experience.</div>\r\n<div><br /></div>\r\n<blockquote style=\"font-style:italic;text-align:center;padding:20px;color:#464545;background:rgba(139,131,133,0.54);font-size:18px;border-left:4px solid rgb(223,52,89);\">\r\n    As technology continues to evolve, service centers are likely to adopt even more advanced and innovative solutions that enhance their ability to provide seamless and proactive service.</blockquote>\r\n<h6 class=\"m-0\">Harnessing Data Analytics and Machine Learning for Predictive Maintenance</h6>\r\n<div>This evolution was further accelerated by the integration of artificial intelligence (AI) and automation tools.\r\n    AI-driven systems can now monitor and analyze real-time data from various sources, providing insights into potential\r\n    issues and suggesting preventive measures. Automation tools facilitate swift responses to identified issues, often\r\n    without the need for human intervention. For instance, automated systems can initiate repairs or adjustments based\r\n    on predefined parameters, ensuring that minor issues are resolved before they escalate into significant problems.\r\n</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">The Role of AI and Automation in Revolutionizing Service Center Operations</h6>\r\n<div>The proactive approach not only enhances operational efficiency but also fosters a more positive customer\r\n    experience. By addressing potential issues before they impact customers, service centers can ensure a higher level\r\n    of service continuity and reliability. Customers benefit from fewer disruptions and a more streamlined experience,\r\n    leading to increased satisfaction and loyalty.</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">Enhancing Customer Experience Through Proactive Service Strategies</h6>\r\n<div>In essence, the evolution from a reactive to a proactive model in service center automation represents a\r\n    significant leap forward. It highlights the importance of leveraging advanced technologies to not only address\r\n    problems but to anticipate and prevent them, ultimately leading to a more efficient and customer-centric operation.\r\n    As technology continues to evolve, service centers will likely see even more sophisticated solutions that further\r\n    enhance their ability to provide seamless and proactive service.</div>\r\n<div><br /></div>",
+    "image": "67d2909041f941741852816.png"
+   },
+   "tempname": "basic",
+   "slug": "do-professional-logo-design-unlimited-revisions-favicon-and-artwork",
+   "id": 94
+  },
+  {
+   "dataKeys": "blog.element",
+   "dataValues": {
+    "has_image": [
+     "1"
+    ],
+    "title": "The ultimate guide to creating a Wix website",
+    "description": "<div>The landscape of service center automation has undergone a remarkable transformation over the past few decades,\r\n    shifting from reactive to proactive approaches. Initially, service centers operated on a reactive model, primarily\r\n    addressing issues only after they arose. This method often involved responding to customer complaints and\r\n    troubleshooting problems as they emerged, leading to higher levels of downtime and customer dissatisfaction. The\r\n    focus was largely on fixing problems rather than preventing them, which created a cycle of continuous reaction to\r\n    service issues.</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">Shifting Paradigms: The Move Toward Proactive Service Models</h6>\r\n<div>As technology advanced, the paradigm began to shift towards a more proactive approach. The rise of advanced data\r\n    analytics and machine learning techniques enabled service centers to anticipate potential issues before they\r\n    occurred. By analyzing historical data and recognizing patterns, service centers could now predict when equipment\r\n    might fail or when a system could encounter problems. This shift not only reduced the frequency of unexpected\r\n    disruptions but also improved overall operational efficiency. Predictive maintenance became a key feature of\r\n    proactive service centers, allowing them to schedule maintenance activities during non-peak hours and address issues\r\n    before they impacted the customer experience.</div>\r\n<div><br /></div>\r\n<blockquote style=\"font-style:italic;text-align:center;padding:20px;color:#464545;background:rgba(139,131,133,0.54);font-size:18px;border-left:4px solid rgb(223,52,89);\">\r\n    As technology continues to evolve, service centers are likely to adopt even more advanced and innovative solutions that enhance their ability to provide seamless and proactive service.</blockquote>\r\n<h6 class=\"m-0\">Harnessing Data Analytics and Machine Learning for Predictive Maintenance</h6>\r\n<div>This evolution was further accelerated by the integration of artificial intelligence (AI) and automation tools.\r\n    AI-driven systems can now monitor and analyze real-time data from various sources, providing insights into potential\r\n    issues and suggesting preventive measures. Automation tools facilitate swift responses to identified issues, often\r\n    without the need for human intervention. For instance, automated systems can initiate repairs or adjustments based\r\n    on predefined parameters, ensuring that minor issues are resolved before they escalate into significant problems.\r\n</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">The Role of AI and Automation in Revolutionizing Service Center Operations</h6>\r\n<div>The proactive approach not only enhances operational efficiency but also fosters a more positive customer\r\n    experience. By addressing potential issues before they impact customers, service centers can ensure a higher level\r\n    of service continuity and reliability. Customers benefit from fewer disruptions and a more streamlined experience,\r\n    leading to increased satisfaction and loyalty.</div>\r\n<div><br /></div>\r\n<h6 class=\"m-0\">Enhancing Customer Experience Through Proactive Service Strategies</h6>\r\n<div>In essence, the evolution from a reactive to a proactive model in service center automation represents a\r\n    significant leap forward. It highlights the importance of leveraging advanced technologies to not only address\r\n    problems but to anticipate and prevent them, ultimately leading to a more efficient and customer-centric operation.\r\n    As technology continues to evolve, service centers will likely see even more sophisticated solutions that further\r\n    enhance their ability to provide seamless and proactive service.</div>\r\n<div><br /></div>",
+    "image": "67d2908470ce21741852804.png"
+   },
+   "tempname": "basic",
+   "slug": "the-ultimate-guide-to-creating-a-wix-website",
+   "id": 95
+  },
+  {
+   "dataKeys": "client.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d9401a1a1b21742290970.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 96
+  },
+  {
+   "dataKeys": "client.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d9401033c001742290960.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 97
+  },
+  {
+   "dataKeys": "client.element",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d940083980d1742290952.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 98
+  },
+  {
+   "dataKeys": "switching_button.content",
+   "dataValues": {
+    "freelancer_login_button": "Login as Freelancer",
+    "buyer_login_button": "Login as Buyer",
+    "freelancer_register_button": "Join as Freelancer",
+    "buyer_register_button": "Join as Buyer"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 99
+  },
+  {
+   "dataKeys": "policy_pages.element",
+   "dataValues": {
+    "title": "Bid Policy",
+    "details": "<h5>Introduction</h5>\r\n        <p>\r\n            This Privacy Policy describes how we collect, uses, and discloses information, including personal information, in connection with your use of our website.\r\n        </p>\r\n        <br />\r\n        <h5>Information We Collect</h5>\r\n        <p>We collect two main types of information on the Website:</p>\r\n        <ul>\r\n            <li><p><strong>Personal Information: </strong>This includes data that can identify you as an individual, such as your name, email address, phone number, or mailing address. We only collect this information when you voluntarily provide it to us, like signing up for a newsletter, contacting us through a form, or making a purchase.</p></li>\r\n            <li><p><strong>Non-Personal Information: </strong>This data cannot be used to identify you directly. It includes details like your browser type, device type, operating system, IP address, browsing activity, and usage statistics. We collect this information automatically through cookies and other tracking technologies.</p></li>\r\n        </ul>\r\n        <br />\r\n        <h5>How We Use Information</h5>\r\n        <p>The information we collect allows us to:</p>\r\n        <ul>\r\n            <li>Operate and maintain the Website effectively.</li>\r\n            <li>Send you newsletters or marketing communications, but only with your consent.</li>\r\n            <li>Respond to your inquiries and fulfill your requests.</li>\r\n            <li>Improve the Website and your user experience.</li>\r\n            <li>Personalize your experience on the Website based on your browsing habits.</li>\r\n            <li>Analyze how the Website is used to improve our services.</li>\r\n            <li>Comply with legal and regulatory requirements.</li>\r\n        </ul>\r\n        <br />\r\n        <h5>Sharing of Information</h5>\r\n        <p>We may share your information with trusted third-party service providers who assist us in operating the Website and delivering our services. These providers are obligated by contract to keep your information confidential and use it only for the specific purposes we disclose it for.</p>\r\n        <p>We will never share your personal information with any third parties for marketing purposes without your explicit consent.</p>\r\n        <br />\r\n        <h5>Data Retention</h5>\r\n        <p>We retain your personal information only for as long as necessary to fulfill the purposes it was collected for. We may retain it for longer periods only if required or permitted by law.</p>\r\n        <br />\r\n        <h5>Security Measures</h5>\r\n        <p>We take reasonable precautions to protect your information from unauthorized access, disclosure, alteration, or destruction. However, complete security cannot be guaranteed for any website or internet transmission.</p>\r\n        <br />\r\n        <h5>Changes to this Privacy Policy</h5>\r\n        <p>We may update this Privacy Policy periodically. We will notify you of any changes by posting the revised policy on the Website. We recommend reviewing this policy regularly to stay informed of any updates.</p>\r\n        <p><strong>Remember:</strong>  This is a sample policy and may need adjustments to comply with specific laws and reflect your website's unique data practices. Consider consulting with a legal professional to ensure your policy is fully compliant.</p>"
+   },
+   "tempname": "basic",
+   "slug": "bid-policy",
+   "id": 100
+  },
+  {
+   "dataKeys": "breadcrumb.content",
+   "dataValues": {
+    "has_image": "1",
+    "image": "67d2a9cd026fd1741859277.png"
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 101
+  },
+  {
+   "dataKeys": "faq.element",
+   "dataValues": {
+    "question": "How can I improve my Upwork profile visibility?",
+    "answer": "To enhance your profile visibility, optimize your profile with relevant keywords, maintain a high job success score, gather positive client feedback, and actively apply for jobs that match your skills."
+   },
+   "tempname": "basic",
+   "slug": "",
+   "id": 102
+  }
+ ],
+ "pages": [
+  {
+   "name": "HOME",
+   "slug": "/",
+   "secs": [
+    "category",
+    "how_work",
+    "account",
+    "why_choose",
+    "find_task",
+    "facility",
+    "completion_work",
+    "testimonial",
+    "top_freelancer",
+    "subscribe",
+    "faq",
+    "blog"
+   ],
+   "isDefault": 1
+  },
+  {
+   "name": "Find Job",
+   "slug": "freelance-jobs",
+   "secs": [],
+   "isDefault": 1
+  },
+  {
+   "name": "Find Talent",
+   "slug": "talents",
+   "secs": [],
+   "isDefault": 1
+  },
+  {
+   "name": "Blog",
+   "slug": "blog",
+   "secs": [],
+   "isDefault": 1
+  },
+  {
+   "name": "Contact",
+   "slug": "contact",
+   "secs": [
+    "support",
+    "faq"
+   ],
+   "isDefault": 1
+  },
+  {
+   "name": "About",
+   "slug": "about",
+   "secs": [
+    "account",
+    "about",
+    "why_choose",
+    "completion_work",
+    "testimonial",
+    "top_freelancer",
+    "support"
+   ],
+   "isDefault": 0
+  }
+ ],
+ "settings": {
+  "siteName": "BF-Blessy",
+  "baseColor": "14a800",
+  "secondaryColor": "063862",
+  "curText": "USD",
+  "curSym": "$",
+  "paginate": 20,
+  "escrowPayment": true,
+  "percentServiceCharge": true,
+  "fixedServiceCharge": 5.0,
+  "jobAutoApproved": false,
+  "registration": true,
+  "buyerRegistration": true
+ },
+ "languages": [
+  {
+   "id": 1,
+   "name": "English",
+   "code": "en",
+   "is_default": 1,
+   "image": "660b94fa876ac1712035066.png",
+   "created_at": "2020-07-06 03:47:55",
+   "updated_at": "2024-04-01 23:17:46"
+  }
+ ]
+}

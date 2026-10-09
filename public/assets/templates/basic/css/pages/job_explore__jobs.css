@@ -1,0 +1,51 @@
+
+        .job-category-wrapper .job-category-body__content:has(.pagination) .d-none.flex-sm-fill.d-sm-flex.align-items-sm-center.justify-content-sm-between {
+            padding: 20px;
+        }
+
+        .job-category-wrapper .job-category-body__content .pagination {
+            border: 1px solid hsl(var(--black)/.1);
+        }
+
+        .job-category-body__content {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .skeleton-loading {
+            padding: 20px;
+        }
+
+        .skeleton-line {
+            height: 20px;
+            background: #e0e0e0;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.6;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.6;
+            }
+        }
+
+        .job-category-body__content {
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+    

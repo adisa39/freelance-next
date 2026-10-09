@@ -1,0 +1,23 @@
+
+        .nicEdit-main {
+            outline: none !important;
+        }
+
+        .nicEdit-custom-main {
+            border-right-color: #cacaca73 !important;
+            border-bottom-color: #cacaca73 !important;
+            border-left-color: #cacaca73 !important;
+            border-radius: 0 0 5px 5px !important;
+        }
+
+        .nicEdit-panelContain {
+            border-color: #cacaca73 !important;
+            border-radius: 5px 5px 0 0 !important;
+            background-color: #fff !important
+        }
+
+        .nicEdit-buttonContain div {
+            background-color: #fff !important;
+            border: 0 !important;
+        }
+    

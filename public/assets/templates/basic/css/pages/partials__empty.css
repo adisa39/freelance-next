@@ -1,0 +1,16 @@
+
+        .empty-slip-message {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #cfcfcf;
+            font-size: 0.8754rem;
+            font-family: inherit;
+        }
+
+        .empty-slip-message img {
+            width: 75px !important;
+            margin-bottom: 0.875rem;
+        }
+    

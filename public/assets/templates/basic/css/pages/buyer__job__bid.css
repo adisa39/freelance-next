@@ -1,0 +1,52 @@
+
+        .shortlist-btn {
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+        }
+
+        .shortlist-btn i {
+            font-size: 1rem;
+        }
+
+        .shortlist-btn.btn-outline--primary:hover {
+            background-color: #0d6efd;
+            color: #fff;
+            border-color: #0d6efd;
+        }
+
+        .shortlist-btn.btn-success:hover {
+            background-color: #198754;
+            color: #fff;
+            border-color: #198754;
+        }
+
+        .sort-btn {
+            text-decoration: none;
+            color: inherit;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .sort-btn:hover {
+            color: #007bff;
+        }
+
+        .sort-btn i {
+            margin-left: 5px;
+        }
+
+        .btn---sm {
+            padding: 6px 7px;
+            font-weight: 600;
+        }
+
+        a.disabled {
+            color: hsl(var(--secondary)) !important;
+            cursor: none !important;
+        }
+    

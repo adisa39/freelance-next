@@ -1,0 +1,172 @@
+
+        .dashboard .dashboard-item .delivery-info__top .title {
+            width: 59%;
+        }
+
+        .profile-complete-notification {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            align-items: center;
+        }
+
+        .profile-complete-notification small {
+            color: #721c24;
+        }
+
+        .profile-complete-notification p {
+            margin: 0;
+        }
+
+        .update-link {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* progess bar -user profiles */
+        .upgrade-profile {
+            background-color: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .upgrade-profile__content .title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .upgrade-profile__content .text {
+            font-size: 14px;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .progress-container {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 20px auto 10px;
+        }
+
+        .progress-ring {
+            transform: rotate(-90deg);
+        }
+
+        .progress-bg {
+            stroke-dasharray: 440;
+            stroke-dashoffset: 0;
+            transition: stroke-dashoffset 1s linear;
+        }
+
+        .progress-bar {
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+            transition: stroke-dashoffset 1.5s ease-out;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            font-weight: bold;
+            color: #14A800;
+        }
+
+        .percentag {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: hsl(var(--white));
+            line-height: 1;
+            font-size: 14px;
+            z-index: 911;
+            font-weight: 700;
+        }
+
+        .progress-container .percent {
+            position: relative;
+        }
+
+        .progress-container svg {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            transform: rotate(-90deg);
+        }
+
+        .progress-container svg circle {
+            fill: none;
+            stroke-width: 6;
+        }
+
+        /* Outer Circle (background) */
+        .progress-container svg circle.first {
+            stroke: #fff;
+            /* White background for the remaining portion */
+        }
+
+        /* Progress Circle (the actual progress) */
+        .progress-container svg circle.second {
+            stroke-dasharray: 219.91;
+            /* Circumference of a circle with r=35 */
+            stroke-dashoffset: calc(219.91 - (219.91 * var(--percent)) / 100);
+            stroke: hsl(var(--base));
+            /* Progress color */
+        }
+
+        .dashboard-body-wrapper {
+            display: flex;
+            gap: 20px;
+        }
+        .upgrade-profile__content {
+    text-align: left;
+}
+        .dashboard-body-wrapper__sidebar {
+            width: 370px;
+        }
+
+        .dashboard-body-wrapper__content {
+            width: calc(100% - 370px);
+        }
+
+        @media (max-width:1499px) {
+            .dashboard-body-wrapper__sidebar {
+                width: 350px;
+            }
+
+            .dashboard-body-wrapper__content {
+                width: calc(100% - 350px);
+            }
+        }
+
+        @media (max-width:1199px) {
+            .dashboard-body-wrapper {
+                flex-direction: column;
+            }
+
+            .dashboard-body-wrapper__sidebar {
+                width: 100%;
+            }
+
+            .dashboard-body-wrapper__content {
+                width: 100%;
+            }
+        }
+
+        .list-group-item {
+            border: unset ! important;
+        }
+    

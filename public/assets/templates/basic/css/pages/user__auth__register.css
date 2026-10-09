@@ -1,0 +1,40 @@
+
+            .account-form .form--control {
+                backdrop-filter: blur(5px) !important;
+                background-color: rgb(255 255 255 / 10%) !important;
+            }
+
+            .form-disabled {
+                overflow: hidden;
+                position: relative;
+                border-radius: 25px;
+            }
+
+            .form-disabled::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.2);
+                top: 0;
+                left: 0;
+                backdrop-filter: blur(2px);
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                z-index: 99;
+            }
+
+            .form-disabled-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 991;
+                font-size: 24px;
+                height: auto;
+                width: 100%;
+                text-align: center;
+                color: hsl(var(--dark-600));
+                font-weight: 800;
+                line-height: 1.2;
+            }
+        

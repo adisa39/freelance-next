@@ -1,0 +1,15 @@
+
+        .contact-section .social-list__link {
+            width: 38px;
+            height: 38px;
+            color: hsl(var(--base));
+            font-size: 14px;
+            border: 1px solid hsl(var(--base));
+            background-color: hsl(var(--white) / 0.15) !important;
+        }
+        .contact-section .social-list__link:hover {
+            
+            color: hsl(var(--white)) !important;
+            background-color: hsl(var(--base)) !important;
+        }
+    

@@ -1,0 +1,24 @@
+/* Tailwind utilities only (no preflight) so they can coexist with the template's Bootstrap CSS in dashboards. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+.site-navbar-collapse {
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
+}
+
+@media (max-width: 1199.98px) {
+  .site-navbar-collapse {
+    display: none;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: stretch;
+  }
+
+  .site-navbar-collapse.is-open {
+    display: block;
+  }
+}

@@ -1,0 +1,12 @@
+
+        #dropZone {
+            border: 2px dashed hsl(var(--base));
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #fileInput {
+            display: none;
+        }
+    

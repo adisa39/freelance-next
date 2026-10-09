@@ -1,0 +1,6 @@
+
+        .empty-message {
+            background: unset;
+            border: 1px solid hsl(var(--white));
+        }
+    
