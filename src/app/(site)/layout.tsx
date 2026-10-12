@@ -23,7 +23,7 @@ export default async function SiteRoot({ children }: { children: React.ReactNode
         <style dangerouslySetInnerHTML={{ __html: themeCss(s.baseColor, s.secondaryColor) }} />
       </head>
       <body>
-        <Preloader />
+        {/* <Preloader /> */}
         <div className="body-overlay" />
         <div className="sidebar-overlay" />
         <a className="scroll-top"><i className="fas fa-angle-double-up" /></a>

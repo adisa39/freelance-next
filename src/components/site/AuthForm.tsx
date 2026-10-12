@@ -1,29 +1,62 @@
 'use client';
+
 import { useState } from 'react';
 import { api } from '@/lib/client';
 
-type Props = { mode: 'login' | 'register'; role: 'user' | 'buyer'; heading: string; welcome: string; switching: { a: string; b: string }; policies: { slug: string; title: string }[]; images: { shape: string; thumb: string; logo: string } };
+declare global {
+  interface Window {
+    ethereum?: { request(args: { method: string; params?: unknown[] }): Promise<unknown> };
+  }
+}
 
-/** Port of user|buyer/auth/login|register.blade.php — identical markup/classes; submits to the JSON auth API. */
-export default function AuthForm({ mode, role, heading, welcome, switching, policies, images }: Props) {
-  const [f, setF] = useState({ login: '', password: '', firstname: '', lastname: '', email: '', password_confirmation: '', agree: false });
-  const [show, setShow] = useState({ p: false, c: false }); const [err, setErr] = useState(''); const [busy, setBusy] = useState(false);
+type Props = { mode: 'login' | 'register'; role: 'user' | 'buyer'; heading: string; welcome: string; switching: { a: string; b: string }; images: { shape: string; thumb: string; logo: string } };
+
+const CHAIN_ID = Number(process.env.NEXT_PUBLIC_CHAIN_ID || 19042026);
+
+export default function AuthForm({ mode, role, heading, welcome, switching, images }: Props) {
+  const [profile, setProfile] = useState({ firstname: '', lastname: '', email: '' });
+  const [status, setStatus] = useState<'idle' | 'waiting' | 'working'>('idle');
+  const [message, setMessage] = useState('');
+  const [failed, setFailed] = useState(false);
   const base = role === 'user' ? '/freelancer' : '/buyer';
-  const set = (k: keyof typeof f) => (e: React.ChangeEvent<HTMLInputElement>) => setF({ ...f, [k]: e.target.type === 'checkbox' ? e.target.checked : e.target.value });
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault(); setBusy(true); setErr('');
+  const isRegister = mode === 'register';
+
+  const connect = async () => {
+    setFailed(false);
+    setStatus('waiting');
+    setMessage('Waiting for your InterLink wallet…');
     try {
-      if (mode === 'login') await api('/api/auth/login', { body: { role, login: f.login, password: f.password } });
-      else await api('/api/auth/register', { body: { role, firstname: f.firstname, lastname: f.lastname, email: f.email, password: f.password, password_confirmation: f.password_confirmation } });
+      const wallet = window.ethereum;
+      if (!wallet) throw new Error('Open this page in InterLink or connect an InterLink compatible wallet.');
+      const accounts = await wallet.request({ method: 'eth_requestAccounts' });
+      if (!Array.isArray(accounts) || typeof accounts[0] !== 'string' || !/^0x[\da-f]{40}$/i.test(accounts[0])) throw new Error('No valid wallet address was returned.');
+      const address = accounts[0];
+      const chain = await wallet.request({ method: 'eth_chainId' });
+      if (typeof chain !== 'string' || Number.parseInt(chain, 16) !== CHAIN_ID) throw new Error(`Switch your wallet to ITL Testnet (Chain ID ${CHAIN_ID}) and try again.`);
+
+      setStatus('working');
+      setMessage('Requesting a secure sign-in challenge…');
+      const challenge = await api<{ challengeId: string; messageToSign: string }>('/api/auth/interlink', { body: { action: 'challenge', walletAddress: address } });
+      setMessage('Approve the sign-in message in your wallet.');
+      const bytes = new TextEncoder().encode(challenge.messageToSign);
+      const hexMessage = `0x${Array.from(bytes, (byte) => byte.toString(16).padStart(2, '0')).join('')}`;
+      const signature = await wallet.request({ method: 'personal_sign', params: [hexMessage, address] });
+      if (typeof signature !== 'string') throw new Error('The wallet returned an invalid signature.');
+
+      setMessage('Verifying your wallet…');
+      await api('/api/auth/interlink', { body: {
+        action: 'verify', flow: mode, role, walletAddress: address,
+        challengeId: challenge.challengeId, message: challenge.messageToSign, signature,
+        ...(isRegister ? profile : {}),
+      } });
       window.location.href = `${base}/dashboard`;
-    } catch (x) { setErr((x as Error).message); setBusy(false); }
+    } catch (error) {
+      setFailed(true);
+      setMessage((error as Error).message || 'Wallet sign-in failed. Please try again.');
+      setStatus('idle');
+    }
   };
-  const Pw = ({ id, name, value, k, sk }: { id: string; name: string; value: string; k: 'password' | 'password_confirmation'; sk: 'p' | 'c' }) => (
-    <div className="position-relative">
-      <input id={id} type={show[sk] ? 'text' : 'password'} name={name} value={value} onChange={set(k)} className="form--control form-control" autoComplete="off" required />
-      <span className={`password-show-hide fa-solid ${show[sk] ? 'fa-eye-slash' : 'fa-eye'} toggle-password`} aria-label="Toggle password visibility" onClick={() => setShow({ ...show, [sk]: !show[sk] })} />
-    </div>
-  );
+
   return (
     <section className="account"><div className="account-inner">
       <div className="account-inner__left">
@@ -32,39 +65,32 @@ export default function AuthForm({ mode, role, heading, welcome, switching, poli
       </div>
       <div className="account-inner__right"><div className="account-form-wrapper">
         <a href="/" className="account-form__logo"><img src={images.logo} alt="" /></a>
-        <form onSubmit={submit}><div className="account-form">
+        <form className="account-form" onSubmit={(e) => { e.preventDefault(); void connect(); }}>
           <div className="radio-btn-wrapper">
-            <div className="form--radio"><input className="form-check-input" type="radio" name="apply-wrapper" id="apply-freelancer" value="1" checked={role === 'user'} onChange={() => { window.location.href = `/freelancer/${mode}`; }} /><label className="form-check-label" htmlFor="apply-freelancer"><span className="text">{switching.a}</span></label></div>
-            <div className="form--radio"><input className="form-check-input" type="radio" name="apply-wrapper" id="apply-buyer" value="2" checked={role === 'buyer'} onChange={() => { window.location.href = `/buyer/${mode}`; }} /><label className="form-check-label" htmlFor="apply-buyer"><span className="text">{switching.b} </span></label></div>
+            <div className="form--radio"><input className="form-check-input" type="radio" name="apply-wrapper" id="apply-freelancer" checked={role === 'user'} onChange={() => { window.location.href = `/freelancer/${mode}`; }} /><label className="form-check-label" htmlFor="apply-freelancer"><span className="text">{switching.a}</span></label></div>
+            <div className="form--radio"><input className="form-check-input" type="radio" name="apply-wrapper" id="apply-buyer" checked={role === 'buyer'} onChange={() => { window.location.href = `/buyer/${mode}`; }} /><label className="form-check-label" htmlFor="apply-buyer"><span className="text">{switching.b}</span></label></div>
           </div>
           <p className="text">{welcome}</p>
-          <h5 className="account-form__title"> {heading}</h5>
-          <div className="row">
-            {mode === 'login' ? (
-              <>
-                <div className="col-12"><div className="form-group"><label htmlFor="username" className="form--label"> Username or Email </label><input type="text" name="username" value={f.login} onChange={set('login')} className="form-control form--control" id="username" required /></div></div>
-                <div className="col-12"><div className="form-group"><label htmlFor="your-password" className="form--label">Password</label><Pw id="your-password" name="password" value={f.password} k="password" sk="p" /></div></div>
-                <div className="col-12"><div className="form-group"><div className="flex-between"><div className="form--check"><input className="form-check-input" type="checkbox" name="remember" id="flexCheckChecked" /><label className="form-check-label" htmlFor="flexCheckChecked"> Remember Me </label></div><a href={`${base}/password/reset`} className="forgot-password"> Forgot password? </a></div></div></div>
-                {err && <div className="col-12"><p className="text-danger">{err}</p></div>}
-                <div className="col-12 form-group"><button type="submit" className="btn btn--base w-100" disabled={busy}> Login Account </button></div>
-              </>
-            ) : (
-              <>
-                <div className="col-sm-6 form-group"><label htmlFor="firstname" className="form--label"> First Name </label><input type="text" className="form-control form--control" name="firstname" value={f.firstname} onChange={set('firstname')} id="firstname" autoComplete="off" required /></div>
-                <div className="col-sm-6 form-group"><label htmlFor="lastname" className="form--label"> Last Name </label><input type="text" className="form-control form--control" name="lastname" value={f.lastname} onChange={set('lastname')} id="lastname" autoComplete="off" required /></div>
-                <div className="col-sm-12 form-group"><label htmlFor="email" className="form--label"> Email Address </label><input type="email" className="form--control form-control checkUser" name="email" value={f.email} onChange={set('email')} id="email" autoComplete="off" required /></div>
-                <div className="col-sm-6 form-group"><label htmlFor="your-password" className="form--label">Password</label><Pw id="your-password" name="password" value={f.password} k="password" sk="p" /></div>
-                <div className="col-sm-6 form-group"><label htmlFor="confirm-password" className="form--label">Confirm Password</label><Pw id="confirm-password" name="password_confirmation" value={f.password_confirmation} k="password_confirmation" sk="c" /></div>
-                <div className="form-group form--check mb-2 flex-nowrap"><input type="checkbox" className="form-check-input" id="agree" name="agree" checked={f.agree} onChange={set('agree')} required /><label htmlFor="agree" className="mx-2"> I agree with {policies.map((p, i) => <span key={p.slug}><a href={`/policy/${p.slug}`} target="_blank" rel="noreferrer">{p.title}</a>{i < policies.length - 1 ? ' , ' : ''}</span>)}</label></div>
-                {err && <div className="col-12"><p className="text-danger">{err}</p></div>}
-                <div className="col-sm-12 form-group"><button type="submit" id="recaptcha" className="btn btn--base w-100" disabled={busy}> Register Account </button></div>
-              </>
-            )}
+          <h5 className="account-form__title">{heading}</h5>
+
+          {isRegister && <div className="row">
+            <div className="col-sm-6 form-group"><label htmlFor="firstname" className="form--label">First Name</label><input id="firstname" className="form-control form--control" autoComplete="given-name" maxLength={80} required value={profile.firstname} onChange={(e) => setProfile({ ...profile, firstname: e.target.value })} /></div>
+            <div className="col-sm-6 form-group"><label htmlFor="lastname" className="form--label">Last Name</label><input id="lastname" className="form-control form--control" autoComplete="family-name" maxLength={80} required value={profile.lastname} onChange={(e) => setProfile({ ...profile, lastname: e.target.value })} /></div>
+            <div className="col-12 form-group"><label htmlFor="email" className="form--label">Email Address</label><input id="email" type="email" className="form-control form--control" autoComplete="email" maxLength={254} required value={profile.email} onChange={(e) => setProfile({ ...profile, email: e.target.value })} /></div>
+          </div>}
+
+          <div className="form-group">
+            <button type="submit" className="btn btn--base w-100" disabled={status !== 'idle'}>
+              <span aria-hidden="true" style={{ marginRight: 8 }}>◎</span>
+              {status === 'waiting' ? 'Waiting for InterLink…' : status === 'working' ? 'Verifying wallet…' : 'Connect using InterLink App'}
+            </button>
+            {message && <p className={`text-center mt-2${failed ? ' text-danger' : ''}`} role={failed ? 'alert' : 'status'} aria-live="polite">{message}</p>}
+            <p className="text-center mt-2">Your wallet signature securely verifies account ownership.</p>
           </div>
-          {mode === 'login'
-            ? <p className="account-form__text"> Don&apos;t have on account yet? <a href={`${base}/register`} className="text--base "> Create Account </a></p>
-            : <p className="account-form__text"> Already have an account? <a href={`${base}/login`} className="text--base apply-form"> Login Now </a></p>}
-        </div></form>
+          {isRegister
+            ? <p className="account-form__text">Already have an account? <a href={`${base}/login`} className="text--base">Login Now</a></p>
+            : <p className="account-form__text">New to the marketplace? <a href={`${base}/register`} className="text--base">Create Account</a></p>}
+        </form>
       </div></div>
     </div></section>
   );
