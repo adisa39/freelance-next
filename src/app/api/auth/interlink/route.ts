@@ -5,6 +5,7 @@ import { getSettings } from '@/lib/settings';
 import { User } from '@/models/User';
 import { Buyer } from '@/models/Buyer';
 import { Wallet } from '@/models/Wallet';
+import type { Doc } from '@/models/_util';
 
 const CHAIN_ID = Number(process.env.INTERLINK_CHAIN_ID || process.env.NEXT_PUBLIC_CHAIN_ID || 19042026);
 const RPC = (process.env.INTERLINK_RPC || 'https://evm-rpc.test-net.interlinklabs.ai/v1').replace(/\/$/, '');
@@ -62,7 +63,7 @@ export const POST = route(async (req) => {
 
   const Model = data.role === 'user' ? User : Buyer;
   let wallet = await Wallet.findOne({ address: walletAddress, chain_id: CHAIN_ID });
-  let account: Awaited<ReturnType<typeof User.findById>> = null;
+  let account: Doc | null = null;
   if (data.flow === 'login') {
     if (!wallet) throw new ApiError(404, 'No account is registered for this wallet. Choose Register to create one.');
     if (wallet.account_role !== data.role) throw new ApiError(403, 'This wallet is linked to a different account type.');
