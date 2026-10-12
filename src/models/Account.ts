@@ -5,7 +5,8 @@ export const accountFields = {
   lastname: { type: String, trim: true },
   username: { type: String, required: true, unique: true, lowercase: true, trim: true },
   email: { type: String, required: true, unique: true, lowercase: true, trim: true },
-  password: { type: String, required: true, select: false },
+  // Legacy accounts can retain a password hash, but marketplace auth no longer uses it.
+  password: { type: String, select: false },
   dialCode: String,
   mobile: String,
   country: String,
