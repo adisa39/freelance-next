@@ -14,7 +14,12 @@ async function main() {
   if (!process.env.MONGODB_URI) throw new Error('Set MONGODB_URI');
   await mongoose.connect(process.env.MONGODB_URI);
   const pw = process.env.ADMIN_PASSWORD || 'ChangeMe123!';
-  await Admin.updateOne({ username: 'admin' }, { $setOnInsert: { name: 'Administrator', username: 'admin', email: 'haycoder24@gmail.com', password: await bcrypt.hash(pw, 10) } }, { upsert: true });
+  const passwordHash = await bcrypt.hash(pw, 10);
+  await Admin.updateOne(
+    { username: 'admin' },
+    { $set: { name: 'Administrator', username: 'admin', email: 'haycoder24@gmail.com', password: passwordHash } },
+    { upsert: true },
+  );
   await Setting.updateOne({ key: 'general' }, { $setOnInsert: { key: 'general' } }, { upsert: true });
 
   // CMS content (home sections, FAQ, policies, contact, social icons…) exported from the original install's database.sql
@@ -36,7 +41,7 @@ async function main() {
     await PayMethod.create({ kind: 'deposit', name: 'Bank transfer', minLimit: 10, maxLimit: 10000, fixedCharge: 0, percentCharge: 1, instruction: 'Transfer to the account below and enter the reference.', formFields: [{ label: 'Transaction reference', required: true }] });
     await PayMethod.create({ kind: 'withdraw', name: 'Bank transfer', minLimit: 10, maxLimit: 10000, fixedCharge: 1, percentCharge: 1, formFields: [{ label: 'Account name', required: true }, { label: 'Account number', required: true }] });
   }
-  console.log(`Seeded. Admin login: admin / ${pw}`);
+  console.log('Seeded. Admin username: admin (password is set from ADMIN_PASSWORD)');
   await mongoose.disconnect();
 }
 main().catch((e) => { console.error(e); process.exit(1); });
