@@ -4,6 +4,6 @@ import DashShell from '@/components/DashShell';
 
 export default async function BuyerLayout({ children }: { children: React.ReactNode }) {
   const s = await readSession();
-  if (s?.role !== 'buyer') redirect('/buyer/login');
-  return <DashShell role="buyer" title="Buyer Dashboard">{children}</DashShell>;
+  if (s?.role !== 'buyer') redirect('/client/login');
+  return <DashShell role="buyer" title="Client Dashboard">{children}</DashShell>;
 }

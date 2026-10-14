@@ -18,7 +18,7 @@ export default function AuthForm({ mode, role, heading, welcome, switching, imag
   const [status, setStatus] = useState<'idle' | 'waiting' | 'working'>('idle');
   const [message, setMessage] = useState('');
   const [failed, setFailed] = useState(false);
-  const base = role === 'user' ? '/freelancer' : '/buyer';
+  const base = role === 'user' ? '/freelancer' : '/client';
   const isRegister = mode === 'register';
 
   const connect = async () => {
@@ -45,7 +45,7 @@ export default function AuthForm({ mode, role, heading, welcome, switching, imag
 
       setMessage('Verifying your wallet…');
       await api('/api/auth/interlink', { body: {
-        action: 'verify', flow: mode, role, walletAddress: address,
+        action: 'verify', flow: mode, role: role === 'buyer' ? 'client' : 'user', walletAddress: address,
         challengeId: challenge.challengeId, message: challenge.messageToSign, signature,
         ...(isRegister ? profile : {}),
       } });
@@ -68,7 +68,7 @@ export default function AuthForm({ mode, role, heading, welcome, switching, imag
         <form className="account-form" onSubmit={(e) => { e.preventDefault(); void connect(); }}>
           <div className="radio-btn-wrapper">
             <div className="form--radio"><input className="form-check-input" type="radio" name="apply-wrapper" id="apply-freelancer" checked={role === 'user'} onChange={() => { window.location.href = `/freelancer/${mode}`; }} /><label className="form-check-label" htmlFor="apply-freelancer"><span className="text">{switching.a}</span></label></div>
-            <div className="form--radio"><input className="form-check-input" type="radio" name="apply-wrapper" id="apply-buyer" checked={role === 'buyer'} onChange={() => { window.location.href = `/buyer/${mode}`; }} /><label className="form-check-label" htmlFor="apply-buyer"><span className="text">{switching.b}</span></label></div>
+            <div className="form--radio"><input className="form-check-input" type="radio" name="apply-wrapper" id="apply-client" checked={role === 'buyer'} onChange={() => { window.location.href = `/client/${mode}`; }} /><label className="form-check-label" htmlFor="apply-client"><span className="text">{switching.b.replace(/buyers?/gi, 'clients')}</span></label></div>
           </div>
           <p className="text">{welcome}</p>
           <h5 className="account-form__title">{heading}</h5>

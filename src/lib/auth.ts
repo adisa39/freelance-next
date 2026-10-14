@@ -18,18 +18,18 @@ const key = () => {
 export const hash = (p: string) => bcrypt.hash(p, 10);
 export const compare = (p: string, h: string) => bcrypt.compare(p, h);
 
-export async function startSession(id: string, role: Role) {
-  const token = await new SignJWT({ role }).setProtectedHeader({ alg: 'HS256' }).setSubject(id).setExpirationTime('7d').sign(key());
-  (await cookies()).set(COOKIE, token, { httpOnly: true, sameSite: 'lax', secure: process.env.NODE_ENV === 'production', path: '/', maxAge: 60 * 60 * 24 * 7 });
+export async function startSession(id: string, role: Role, identityId?: string) {
+  const token = await new SignJWT({ role, ...(identityId ? { identityId } : {}) }).setProtectedHeader({ alg: 'HS256' }).setSubject(id).setExpirationTime('7d').sign(key());
+  (await cookies()).set(COOKIE, token, { httpOnly: true, sameSite: 'lax', secure: process.env.NODE_ENV === 'production', path: '/', maxAge: 60 * 60 * 24 * 1 });
 }
 export async function endSession() { (await cookies()).delete(COOKIE); }
 
-export async function readSession(): Promise<{ id: string; role: Role } | null> {
+export async function readSession(): Promise<{ id: string; role: Role; identityId?: string } | null> {
   const t = (await cookies()).get(COOKIE)?.value;
   if (!t) return null;
   try {
     const { payload } = await jwtVerify(t, key());
-    return payload.sub ? { id: payload.sub, role: payload.role as Role } : null;
+    return payload.sub ? { id: payload.sub, role: payload.role as Role, ...(typeof payload.identityId === 'string' ? { identityId: payload.identityId } : {}) } : null;
   } catch { return null; }
 }
 

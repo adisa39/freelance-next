@@ -10,7 +10,7 @@ const empty = { title: '', slug: '', category: '', subcategory: '', description:
 export default function JobForm({ jobId }: { jobId?: string }) {
   const router = useRouter();
   const { data: cat } = useApi<{ categories: any[]; subcategories: any[]; skills: any[] }>('/api/catalog'); // eslint-disable-line @typescript-eslint/no-explicit-any
-  const { data: existing } = useApi<any>(jobId ? `/api/buyer/jobs/${jobId}` : null); // eslint-disable-line @typescript-eslint/no-explicit-any
+  const { data: existing } = useApi<any>(jobId ? `/api/client/jobs/${jobId}` : null); // eslint-disable-line @typescript-eslint/no-explicit-any
   const [f, setF] = useState(empty);
   const { busy, error, run } = useAction();
   useEffect(() => {
@@ -22,8 +22,8 @@ export default function JobForm({ jobId }: { jobId?: string }) {
     e.preventDefault();
     run(async () => {
       const body = { ...f, status, budget: Number(f.budget), projectScope: Number(f.projectScope), jobLongevity: Number(f.jobLongevity), skillLevel: Number(f.skillLevel), slug: f.slug || undefined, questions: f.questions.filter(Boolean) };
-      await api(jobId ? `/api/buyer/jobs/${jobId}` : '/api/buyer/jobs', { method: jobId ? 'PUT' : 'POST', body });
-      router.push('/buyer/jobs');
+      await api(jobId ? `/api/client/jobs/${jobId}` : '/api/client/jobs', { method: jobId ? 'PUT' : 'POST', body });
+      router.push('/client/jobs');
     });
   };
   return (

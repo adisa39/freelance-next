@@ -10,6 +10,7 @@ import SubscribeForm from './SubscribeForm';
 void BadgeSetting; void Skill; // ensure models are registered for populate()
 type P = React.ReactNode;
 const Hl = ({ cls, brk, len, children }: { cls: string; brk: number; len: number; children: P }) => <h2 className={`${cls} s-highlight`} data-s-break={brk} data-s-length={len}>{children}</h2>;
+const clientCopy = (value: unknown) => String(value ?? '').replace(/\bbuyer(s)?\b/gi, (_match, plural: string | undefined) => plural ? 'clients' : 'client');
 
 export async function Banner() {
   const [b, clients] = await Promise.all([getContent('banner.content', true), getContent('client.element', false, null, true)]);
@@ -36,7 +37,7 @@ export async function Banner() {
               </div>
             </form>
             <div className="buyer-wrapper">
-              <span className="buyer-wrapper__title">{b.subtitle}</span>
+              <span className="buyer-wrapper__title">{String(b.subtitle ?? '').replace(/\bbuyer(s)?\b/gi, (_match, plural: string | undefined) => plural ? 'clients' : 'client')}</span>
               <div className="brand-slider">{clients.map((c) => <img key={c.id} src={frontendImage('client', c.dataValues.image)} alt="" />)}</div>
             </div>
           </div>
@@ -100,7 +101,7 @@ export async function Account() {
   return (
     <div className="account-section my-120"><div className="container"><div className="row gy-4">
       {item(a.freelancer_title, a.freelancer_content, a.freelancer_button_name, '/freelancer/register', frontendImage('account', a.freelancer))}
-      {item(a.buyer_title, a.buyer_content, a.buyer_button_name, '/buyer/register', frontendImage('account', a.buyer))}
+      {item(clientCopy(a.buyer_title), clientCopy(a.buyer_content), clientCopy(a.buyer_button_name), '/client/register', frontendImage('account', a.buyer))}
     </div></div></div>
   );
 }

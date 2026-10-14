@@ -36,7 +36,7 @@ export default async function Talent({ params }: { params: Promise<{ username: s
                 </div>
               </div>
               <div className="profile-action-btn">
-                <a href="/buyer/login" className="profile-action-btn__bid btn btn--sm"> Invite to bid </a>
+                <a href="/client/login" className="profile-action-btn__bid btn btn--sm"> Invite to bid </a>
               </div>
             </div>
           </div>
