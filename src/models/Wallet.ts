@@ -5,6 +5,7 @@ import { defineModel } from './_util';
 export const Wallet = defineModel('Wallet', {
   account_id: { type: Schema.Types.ObjectId, required: true },
   account_role: { type: String, enum: ['user', 'buyer'], required: true },
+  identity_id: { type: Schema.Types.ObjectId, ref: 'Identity' },
   address: { type: String, required: true, lowercase: true, trim: true },
   chain_id: { type: Number, required: true },
   provider: { type: String, enum: ['interlink'], default: 'interlink' },

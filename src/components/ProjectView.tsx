@@ -17,7 +17,7 @@ function RateForm({ initial, submitLabel, onSubmit }: { initial?: { rating: numb
 }
 
 export default function ProjectView({ id, role }: { id: string; role: 'user' | 'buyer' }) {
-  const base = role === 'buyer' ? 'buyer' : 'freelancer';
+  const base = role === 'buyer' ? 'client' : 'freelancer';
   const { data: p, reload } = useApi<any>(`/api/${base}/projects/${id}`); // eslint-disable-line @typescript-eslint/no-explicit-any
   const [reason, setReason] = useState(''); const [file, setFile] = useState<File | null>(null); const [comments, setComments] = useState('');
   const act = useAction();
@@ -67,10 +67,10 @@ export default function ProjectView({ id, role }: { id: string; role: 'user' | '
         {role === 'buyer' && p.status === S.PROJECT.BUYER_REVIEW && (
           <>
             <Card title="Accept & pay"><p className="mb-3 text-sm text-slate-500">Releases {fmtMoney(p.bid?.bidAmount)} to the freelancer.</p>
-              <RateForm submitLabel="Complete project" onSubmit={async (v) => { await api(`/api/buyer/projects/${id}/complete`, { body: v }); reload(); }} />
+              <RateForm submitLabel="Complete project" onSubmit={async (v) => { await api(`/api/client/projects/${id}/complete`, { body: v }); reload(); }} />
             </Card>
             <Card title="Report a problem">
-              <form className="space-y-3" onSubmit={(e) => { e.preventDefault(); act.run(async () => { await api(`/api/buyer/projects/${id}/report`, { body: { report_reason: reason } }); reload(); }); }}>
+              <form className="space-y-3" onSubmit={(e) => { e.preventDefault(); act.run(async () => { await api(`/api/client/projects/${id}/report`, { body: { report_reason: reason } }); reload(); }); }}>
                 <Textarea required placeholder="What's wrong with the delivery?" value={reason} onChange={(e) => setReason(e.target.value)} />
                 <ErrorMsg>{act.error}</ErrorMsg><Btn variant="danger" busy={act.busy}>Report to admin</Btn>
               </form>
@@ -78,7 +78,7 @@ export default function ProjectView({ id, role }: { id: string; role: 'user' | '
           </>
         )}
         {role === 'buyer' && p.status === S.PROJECT.COMPLETED && p.review && (
-          <Card title="Edit your review"><RateForm initial={p.review} submitLabel="Update" onSubmit={async (v) => { await api(`/api/buyer/projects/${id}/review`, { method: 'PUT', body: v }); reload(); }} /></Card>
+          <Card title="Edit your review"><RateForm initial={p.review} submitLabel="Update" onSubmit={async (v) => { await api(`/api/client/projects/${id}/review`, { method: 'PUT', body: v }); reload(); }} /></Card>
         )}
       </div>
     </div>

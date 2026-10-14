@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { siteLogo } from '@/lib/template';
 
 type Props = { pages: { name: string; slug: string }[]; role: 'user' | 'buyer' | 'admin' | null };
-const dash = (role: Props['role']) => (role === 'buyer' ? '/buyer/dashboard' : '/freelancer/dashboard');
+const dash = (role: Props['role']) => (role === 'buyer' ? '/client/dashboard' : '/freelancer/dashboard');
 
 /** Port of partials/header.blade.php. Links are plain <a> (full page loads) like the Laravel site, so the jQuery template JS re-initialises per page. */
 export default function SiteHeader({ pages, role }: Props) {
@@ -18,7 +18,7 @@ export default function SiteHeader({ pages, role }: Props) {
       <div className="container">
         <nav className="navbar navbar-expand-xl navbar-light" style={{ position: 'relative', zIndex: 101 }}>
           <a className="navbar-brand logo" href="/"><img src={siteLogo()} alt="" /></a>
-          <div className="d-xl-none d-block job-link"><a href="/buyer/job/post/form" className="btn btn--base btn--sm">Post Job</a></div>
+          <div className="d-xl-none d-block job-link"><a href="/client/job/post/form" className="btn btn--base btn--sm">Post Job</a></div>
           <button className="navbar-toggler header-button" type="button" aria-controls="navbarSupportedContent" aria-expanded={open} aria-label="Toggle navigation" onClick={() => setOpen((value) => !value)}>
             <span id="hiddenNav"><i className="las la-bars" /></span>
           </button>
@@ -56,7 +56,7 @@ export default function SiteHeader({ pages, role }: Props) {
                     <li className="login-registration-list__item"><a href="/freelancer/register" className="login-registration-list__link"> Register </a></li>
                   </>
                 )}
-                {!authed && <li className="login-registration-list__item"><a href="/buyer/job/post/form" className="btn btn--base"> Post Job </a></li>}
+                {!authed && <li className="login-registration-list__item"><a href="/client/job/post/form" className="btn btn--base"> Post Job </a></li>}
               </ul>
             </div>
           </div>

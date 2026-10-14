@@ -15,15 +15,15 @@ const FREELANCER: Item[] = [
   { label: 'Chat', icon: 'lab la-rocketchat', href: '/freelancer/messages' },
   { label: 'Settings', icon: 'las la-cog', href: '/freelancer/profile' },
 ];
-const BUYER: Item[] = [
-  { label: 'Dashboard', icon: 'las la-home', href: '/buyer/dashboard' },
-  { label: 'Post Job', icon: 'las la-plus-circle', href: '/buyer/jobs/new' },
-  { label: 'My Jobs', icon: 'las la-clipboard-list', href: '/buyer/jobs' },
-  { label: 'All Bids', icon: 'las la-gavel', href: '/buyer/bids' },
-  { label: 'My Projects', icon: 'las la-briefcase', href: '/buyer/projects' },
-  { label: 'Deposit / Withdraw', icon: 'las la-money-check-alt', href: '/buyer/wallet' },
-  { label: 'Support Ticket', icon: 'las la-ticket-alt', href: '/buyer/tickets' },
-  { label: 'Chat', icon: 'lab la-rocketchat', href: '/buyer/messages' },
+const CLIENT: Item[] = [
+  { label: 'Dashboard', icon: 'las la-home', href: '/client/dashboard' },
+  { label: 'Post Job', icon: 'las la-plus-circle', href: '/client/jobs/new' },
+  { label: 'My Jobs', icon: 'las la-clipboard-list', href: '/client/jobs' },
+  { label: 'All Bids', icon: 'las la-gavel', href: '/client/bids' },
+  { label: 'My Projects', icon: 'las la-briefcase', href: '/client/projects' },
+  { label: 'Deposit / Withdraw', icon: 'las la-money-check-alt', href: '/client/wallet' },
+  { label: 'Support Ticket', icon: 'las la-ticket-alt', href: '/client/tickets' },
+  { label: 'Chat', icon: 'lab la-rocketchat', href: '/client/messages' },
 ];
 
 /** Port of layouts/master.blade.php + partials/sidebar.blade.php (same classes; main.js drives the sidebar toggle). */
@@ -32,9 +32,23 @@ export default function DashShell({ role, title, children }: { role: 'user' | 'b
   const { data: me } = useApi<{ name: string; balance?: number; username: string }>('/api/auth/me');
   const [menu, setMenu] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const items = role === 'user' ? FREELANCER : BUYER;
+  const [switchingRole, setSwitchingRole] = useState(false);
+  const [roleError, setRoleError] = useState('');
+  const items = role === 'user' ? FREELANCER : CLIENT;
   const active = (h?: string) => (h && (h === items[0].href ? path === h : path.startsWith(h)) ? 'active' : '');
-  const logout = async (e: MouseEvent<HTMLAnchorElement>) => { e.preventDefault(); await api('/api/auth/logout', { method: 'POST', body: {} }); window.location.href = `/${role === 'user' ? 'freelancer' : 'buyer'}/login`; };
+  const logout = async (e: MouseEvent<HTMLAnchorElement>) => { e.preventDefault(); await api('/api/auth/logout', { method: 'POST', body: {} }); window.location.href = `/${role === 'user' ? 'freelancer' : 'client'}/login`; };
+  const switchRole = async () => {
+    const nextRole = role === 'user' ? 'client' : 'user';
+    setSwitchingRole(true);
+    setRoleError('');
+    try {
+      const result = await api<{ destination: string }>('/api/auth/roles', { body: { role: nextRole } });
+      window.location.href = result.destination;
+    } catch (error) {
+      setRoleError((error as Error).message || 'Could not switch roles.');
+      setSwitchingRole(false);
+    }
+  };
   return (
     <div className="dashboard position-relative"><div className="dashboard__inner flex-wrap">
       <div className={`sidebar-menu flex-between${sidebarOpen ? ' show-sidebar' : ''}`}><div className="sidebar-menu__inner">
@@ -54,15 +68,15 @@ export default function DashShell({ role, title, children }: { role: 'user' | 'b
         <div className="dashboard-header"><div className="dashboard-header__inner flex-between">
           <div className="dashboard-header__left">
             <button type="button" aria-label="Open dashboard menu" aria-expanded={sidebarOpen} className="dashboard-body__bar d-lg-none d-inline-block border-0 bg-transparent" onClick={() => setSidebarOpen(true)}><span className="dashboard-body__bar-icon"><i className="fas fa-bars" /></span></button>
-            <h6 className="title"> {title} </h6>
+            <div><h6 className="title"> {title} </h6><button type="button" className="btn btn-outline--base btn--sm mt-1" disabled={switchingRole} onClick={() => void switchRole()}>{switchingRole ? 'Switching…' : role === 'user' ? 'Switch to Client' : 'Switch to Freelancer'}</button>{roleError && <p className="text-danger text-xs mt-1" role="alert">{roleError}</p>}</div>
           </div>
           <div className="user-info">
             <div className="user-info__right">
-              <div className="notification"><a className="notification-link" href={`/${role === 'user' ? 'freelancer' : 'buyer'}/messages`}><i className="las la-envelope" /></a></div>
+              <div className="notification"><a className="notification-link" href={`/${role === 'user' ? 'freelancer' : 'client'}/messages`}><i className="las la-envelope" /></a></div>
               <div className="user-info__button" onClick={() => setMenu(!menu)}><div className="user-info__thumb"><img src={userImage(undefined)} alt="" /></div></div>
             </div>
             <ul className="user-info-dropdown" style={menu ? { display: 'block' } : undefined}>
-              <div className="profile-icon mb-2"><div className="name">{fullName({ firstname: me?.name })}</div><div className="role">{role === 'user' ? 'Freelancer' : 'Buyer'}</div></div>
+              <div className="profile-icon mb-2"><div className="name">{fullName({ firstname: me?.name })}</div><div className="role">{role === 'user' ? 'Freelancer' : 'Client'}</div></div>
               {role === 'user' && <li className="user-info-dropdown__item"><a className="user-info-dropdown__link" href="/freelancer/profile"><span className="icon"><i className="fas fa-user-circle" /></span><span className="text">My Profile</span></a></li>}
               <li className="user-info-dropdown__item"><a className="user-info-dropdown__link" href="#" onClick={logout}><span className="icon"><i className="fas fa-cog" /></span><span className="text">Logout</span></a></li>
             </ul>

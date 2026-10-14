@@ -2,6 +2,7 @@ import { getContent, getPages, getSiteSettings } from '@/lib/cms';
 import { readSession } from '@/lib/auth';
 
 const Hi = ({ children }: { children: React.ReactNode }) => <h4 className="sign-up-content__title s-highlight" data-s-break="-1" data-s-length="1">{children}</h4>;
+const clientCopy = (value: unknown) => String(value ?? '').replace(/\bbuyer(s)?\b/gi, (_match, plural: string | undefined) => plural ? 'clients' : 'client');
 
 /** Port of partials/footer.blade.php */
 export default async function SiteFooter() {
@@ -10,14 +11,14 @@ export default async function SiteFooter() {
     getContent('social_icon.element', false, null, true), getPages(), getSiteSettings(), readSession(),
   ]);
   const nav = pages.filter((p) => !p.isDefault);
-  const dash = session?.role === 'buyer' ? '/buyer/dashboard' : session?.role === 'user' ? '/freelancer/dashboard' : null;
+  const dash = session?.role === 'buyer' ? '/client/dashboard' : session?.role === 'user' ? '/freelancer/dashboard' : null;
   return (
     <footer className="footer-area">
       <div className="container">
         <div className="footer-area__top">
           <div className="sign-up-wrapper highlight">
             <div className="sign-up-content"><Hi>{acc.freelancer_title}</Hi><p className="sign-up-content__desc"> {acc.freelancer_content} </p><a href="/freelancer/register" className="sign-up-content__btn btn btn--base">{acc.freelancer_button_name} </a></div>
-            <div className="sign-up-content"><Hi>{acc.buyer_title}</Hi><p className="sign-up-content__desc"> {acc.buyer_content} </p><a href="/buyer/register" className="sign-up-content__btn btn btn--base">{acc.buyer_button_name} </a></div>
+            <div className="sign-up-content"><Hi>{clientCopy(acc.buyer_title)}</Hi><p className="sign-up-content__desc"> {clientCopy(acc.buyer_content)} </p><a href="/client/register" className="sign-up-content__btn btn btn--base">{clientCopy(acc.buyer_button_name)} </a></div>
           </div>
         </div>
         <div className="footer-wrapper py-60">
@@ -34,7 +35,7 @@ export default async function SiteFooter() {
             <h5 className="footer-item__title"> Important Link </h5>
             <ul className="footer-menu">
               <li className="footer-menu__item"><a href={dash ?? '/freelancer/login'} className="footer-menu__link"> {dash ? 'Dashboard' : 'Login Now'} </a></li>
-              <li className="footer-menu__item"><a href="/buyer/job/post/form" className="footer-menu__link"> Post a Job </a></li>
+              <li className="footer-menu__item"><a href="/client/job/post/form" className="footer-menu__link"> Post a Job </a></li>
               <li className="footer-menu__item"><a href="/freelance-jobs" className="footer-menu__link"> Find a Jobs </a></li>
               <li className="footer-menu__item"><a href="/talents" className="footer-menu__link">Find a Talent </a></li>
             </ul>

@@ -80,7 +80,7 @@ export default async function ExploreJob({ params }: { params: Promise<{ slug: s
             <div className="sidebar-header__shape"><img src={frontendImage('banner', banner.shape)} alt="" /></div>
           </div>
           <div className="sidebar-item buyer-info-item">
-            <div className="top"><h6 className="sidebar-item__title"> About the Buyer </h6><div className="buyer-info">
+            <div className="top"><h6 className="sidebar-item__title"> About the Client </h6><div className="buyer-info">
               <div className="buyer-info__thumb"><img src={userImage(buyer.image)} alt="" /></div>
               <div className="buyer-info__content">
                 <p className="buyer-info__name"> {`${buyer.firstname ?? ''} ${buyer.lastname ?? ''}`.trim()}</p>
@@ -99,7 +99,7 @@ export default async function ExploreJob({ params }: { params: Promise<{ slug: s
             </div></div>
           </div>
           <div className="sidebar-item"><h6 className="sidebar-item__title"> Verifications </h6><div className="sidebar-item__verify">
-            {[['Verified Profile', `Verified ${buyer.firstname ?? ''} ${buyer.lastname ?? ''} profile`, true], ['Mobile Verified', buyer.sv ? 'Mobile verified users foster greater trust in our community' : 'Buyer foster greater trust in our community', !!buyer.sv], ['Email Verified', buyer.ev ? 'Verified users foster greater trust in our community' : 'Buyer foster greater trust in our community', !!buyer.ev]].map(([t, x, okv], i) => (
+            {[['Verified Profile', `Verified ${buyer.firstname ?? ''} ${buyer.lastname ?? ''} profile`, true], ['Mobile Verified', buyer.sv ? 'Mobile verified users foster greater trust in our community' : 'Client verification builds greater trust in our community', !!buyer.sv], ['Email Verified', buyer.ev ? 'Verified users foster greater trust in our community' : 'Client verification builds greater trust in our community', !!buyer.ev]].map(([t, x, okv], i) => (
               <a key={t as string} href="#" className="verify-item"><span className="verify-item__icon" dangerouslySetInnerHTML={{ __html: VERIFY_SVGS[i] ?? '' }} /><div className="verify-item__content"><span className="verify-item__title"> {t as string} </span><p className={`verify-item__text${okv ? '' : ' unverified-text'}`}> {x as string} </p></div></a>
             ))}
           </div></div>

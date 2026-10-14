@@ -2,16 +2,16 @@ import { z } from 'zod';
 import { route, ok, ApiError, bad } from '@/lib/api';
 import { startSession } from '@/lib/auth';
 import { getSettings } from '@/lib/settings';
-import { User } from '@/models/User';
-import { Buyer } from '@/models/Buyer';
 import { Wallet } from '@/models/Wallet';
+import { Identity } from '@/models/Identity';
+import { ensureIdentity, identityProfileField, profileModel } from '@/lib/identity';
 import type { Doc } from '@/models/_util';
 
 const CHAIN_ID = Number(process.env.INTERLINK_CHAIN_ID || process.env.NEXT_PUBLIC_CHAIN_ID || 19042026);
 const RPC = (process.env.INTERLINK_RPC || 'https://evm-rpc.test-net.interlinklabs.ai/v1').replace(/\/$/, '');
 const challengeSchema = z.object({ action: z.literal('challenge'), walletAddress: z.string().regex(/^0x[\da-f]{40}$/i) });
 const verifySchema = z.object({
-  action: z.literal('verify'), flow: z.enum(['login', 'register']), role: z.enum(['user', 'buyer']),
+  action: z.literal('verify'), flow: z.enum(['login', 'register']), role: z.enum(['user', 'client']).transform((role) => role === 'client' ? 'buyer' : 'user'),
   walletAddress: z.string().regex(/^0x[\da-f]{40}$/i), challengeId: z.string().min(1).max(512),
   message: z.string().min(1).max(10000), signature: z.string().regex(/^0x[\da-f]{130}$/i),
   firstname: z.string().trim().min(1).max(80).optional(), lastname: z.string().trim().min(1).max(80).optional(),
@@ -61,32 +61,61 @@ export const POST = route(async (req) => {
   const result = verification.result as Record<string, unknown> | undefined;
   if (typeof result?.accessToken !== 'string' || !result.accessToken) throw new ApiError(401, 'InterLink could not verify this wallet signature.');
 
-  const Model = data.role === 'user' ? User : Buyer;
-  let wallet = await Wallet.findOne({ address: walletAddress, chain_id: CHAIN_ID });
+  const Model = profileModel(data.role);
+  const wallet = await Wallet.findOne({ address: walletAddress, chain_id: CHAIN_ID });
   let account: Doc | null = null;
+  let identity = wallet?.identity_id ? await Identity.findById(wallet.identity_id) : null;
+
+  // Existing wallet records point directly to one legacy profile. Link that profile
+  // to a shared identity on its next successful wallet sign-in.
+  if (wallet && !identity) {
+    const legacyRole = wallet.account_role as 'user' | 'buyer';
+    const legacyProfile = await profileModel(legacyRole).findById(wallet.account_id);
+    if (!legacyProfile) throw new ApiError(404, 'The account linked to this wallet could not be found.');
+    identity = await ensureIdentity(legacyRole, legacyProfile, wallet);
+  }
+
   if (data.flow === 'login') {
-    if (!wallet) throw new ApiError(404, 'No account is registered for this wallet. Choose Register to create one.');
-    if (wallet.account_role !== data.role) throw new ApiError(403, 'This wallet is linked to a different account type.');
-    const AccountModel = wallet.account_role === 'user' ? User : Buyer;
-    account = await AccountModel.findById(wallet.account_id);
+    if (!wallet || !identity) throw new ApiError(404, 'No account is registered for this wallet. Choose Register to create one.');
+    const profileId = identity.get(identityProfileField(data.role));
+    if (!profileId) throw new ApiError(403, `This wallet does not have a ${data.role === 'user' ? 'freelancer' : 'client'} profile yet. Sign in with your current role and switch roles from the dashboard to add one.`);
+    account = await Model.findById(profileId);
     if (!account) throw new ApiError(404, 'The account linked to this wallet could not be found.');
     if (account.status === 0) throw new ApiError(403, 'This account is disabled. Please contact support.');
   } else {
-    if (wallet) throw new ApiError(409, 'This wallet already has an account. Choose Login to continue.');
     const { firstname, lastname, email } = data;
-    if (!firstname || !lastname) throw bad('First and last name are required to create an account.');
-    if (!email) throw bad('An email address is required to create an account.');
-    const normalizedEmail = email.toLowerCase();
-    if (await Model.exists({ email: normalizedEmail })) throw new ApiError(409, 'An account already uses this email address.');
+    if (!wallet && (!firstname || !lastname || !email)) throw bad('First name, last name, and email are required to create an account.');
+    if (wallet && identity?.get(identityProfileField(data.role))) {
+      throw new ApiError(409, `This wallet already has a ${data.role === 'user' ? 'freelancer' : 'client'} profile. Choose Login to continue.`);
+    }
+    const normalizedEmail = String(email ?? identity?.email ?? '').toLowerCase();
+    if (!normalizedEmail) throw bad('An email address is required to create an account.');
+    if (identity && normalizedEmail !== String(identity.email).toLowerCase()) {
+      throw bad('Use the same email address as your existing profile when adding another role.');
+    }
+    const emailInUse = await Model.exists({ email: normalizedEmail });
+    const emailBelongsToOtherRole = !identity && await profileModel(data.role === 'user' ? 'buyer' : 'user').exists({ email: normalizedEmail });
+    if (emailInUse || emailBelongsToOtherRole) {
+      throw new ApiError(409, 'An account already uses this email. Sign in with its wallet and add your other role from the dashboard.');
+    }
     try {
       account = await Model.create({
-        firstname, lastname, email: normalizedEmail,
+        firstname: identity?.firstname ?? firstname,
+        lastname: identity?.lastname ?? lastname,
+        email: normalizedEmail,
         username: `il_${walletAddress.slice(2)}`,
       });
-      await Wallet.create({
-        account_id: account._id, account_role: data.role,
-        address: walletAddress, chain_id: CHAIN_ID, provider: 'interlink', is_primary: true,
-      });
+      if (!identity) identity = await ensureIdentity(data.role, account);
+      else {
+        identity.set(identityProfileField(data.role), account._id);
+        if (!identity.roles.includes(data.role)) identity.roles.push(data.role);
+        await identity.save();
+      }
+      if (wallet) await wallet.updateOne({ $set: { identity_id: identity._id } });
+      else await Wallet.create({
+          account_id: account._id, account_role: data.role, identity_id: identity._id,
+          address: walletAddress, chain_id: CHAIN_ID, provider: 'interlink', is_primary: true,
+        });
     } catch (error) {
       if (account) await Model.deleteOne({ _id: account._id });
       if (typeof error === 'object' && error !== null && 'code' in error && error.code === 11000) {
@@ -97,6 +126,6 @@ export const POST = route(async (req) => {
   }
 
   if (!account) throw new ApiError(500, 'The account linked to this wallet could not be loaded.');
-  await startSession(String(account._id), data.role);
-  return ok({ id: account._id, role: data.role });
+  await startSession(String(account._id), data.role, identity ? String(identity._id) : undefined);
+  return ok({ id: account._id, role: data.role === 'buyer' ? 'client' : data.role });
 });
